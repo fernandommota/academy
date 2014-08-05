@@ -22,8 +22,11 @@
 		<h3>Ementa</h3>
 		<ul class="list-group ementa">
 			<li class="list-group-item">
-    			<h4>Visão geral da arquitetura de um computador</h4>
-    			<a href="#" class="btn btn-primary">Acessar</a>
+    			<h4>Introdução e Histórico</h4>
+    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
+				<div class="hide">
+					<h1>Introdução</h1>
+				</div>
   			</li>
 			<li class="list-group-item">
     			<h4 class="list-group-item-heading">Avaliação de desempenho</h4>
@@ -83,12 +86,23 @@
 		</ul>
 	</body>
 	<script language="javascript" type="text/javascript">
-$('.ementa .list-group-item').on('click',function(e){
-	//console.log(e);
-	var previous = $(this).closest(".list-group").children(".active");
-    previous.removeClass('active'); // previous list-item
-    $(e.target).addClass('active'); // activated list-item
-});
+function showContent(element){
+	var divContent= $(element).next();
+	var button = $(element);
+	var li=$(element).parent();
+
+	if(divContent.hasClass("hide")){
+		li.addClass("active");
+		divContent.removeClass("hide");
+		divContent.addClass("show");	
+		button.text("Esconder");
+	}else{
+		li.removeClass("active");
+		divContent.removeClass("show");
+		divContent.addClass("hide");	
+		button.text("Exibir");
+	}	
+}
 	</script>
 </html>
 

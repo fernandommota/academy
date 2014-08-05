@@ -21,3 +21,12 @@ body {
 .content iframe{
 	
 }
+
+.hide{
+	display:none;
+}
+
+.show{
+	display:block;
+}
+
