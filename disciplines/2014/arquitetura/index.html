@@ -25,7 +25,123 @@
     			<h4>Introdução e Histórico</h4>
     			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
 				<div class="hide">
-					<h1>Introdução</h1>
+					<hr>
+					<h4>Introdução</h4>
+						<blockquote>
+							<p class="text-justify">Um computador digital é uma máquina que pode resolver problemas para as pessoas executando instruções que lhe são dadas.</p>
+							<p class="text-justify">Uma sequência de instruções que descreve como realizar certa tarefa é denominada <strong>programa</strong>.</p>
+						</blockquote>
+						<blockquote>
+							<p class="text-justify">Os circuitos eletrônicos de cada computador podem reconhecer e executar diretamente um conjunto limitado de instruções simples, e, para que os programas possam ser executados, todos devem antes ser convertidos em instruções.</p>
+						</blockquote>
+						<img src="img/processamento.png" alt="Processamento de Instruções/Dados" class="img-rounded img-responsive">
+						<blockquote>
+							<p class="text-justify">As instruções primitivas formam uma linguagem com a qual pessoas podem se comunicar com computadores. Essa linguagem é denominada <strong>linguagem de máquina</strong></p>
+							<p class="text-justify">Os projetistas de computadores, geralmente fazem com que as instruções sejam as mais simples possíveis, coerentes com os requisitos de utilização e desempenho idealizados para o computador. </p>
+							<p class="text-justify">Como a maioria das linguagens de máquina são simples, todos acham difícil e entendiante usá-la.</p>	
+							<p class="text-justify">Com o passar do tempo, essas observações resultaram em uma série de abstrações. Assim, a complexidade pode ser dominada e sistemas de computação podem ser projetados de modo estruturado, sistemático. Denominamos essa abordagem <strong class="label label-danger">organização estruturada de computadores</strong>.</p>
+						</blockquote> 
+						
+						<blockquote>
+							<p class="text-justify">Portanto, existe uma grande lacuna entre o que é conveniente para as pessoas e o que é conveniente para computadores. As pessoas querem fazer X mas os computadores só podem fazer Y.</p>
+							<p class="text-justify">Para resolver este problema há <strong>duas abordagens (tradução e interpretação)</strong>, ambas envolvem projetar um novo conjunto de instruções que seja mais conveniente para as pessoas usarem do que o conjunto de instruções que já vem embutido na máquina.</p>
+						</blockquote> 	
+
+						<blockquote class="alert alert-danger">
+							<h4>Tradução:</h4>
+							<p class="text-justify">Caracteriza-se pela criação de um programa em um nível de abstração acima da linguagem de máquina.</p>
+							<p class="text-justify">As instruções criadas nessa linguagem de "alto nível" são substituídas pelas instruções de linguagem de máquina.</p>
+							<p class="text-justify">O programa responsável por executar esta substituição é chamado de compilador.</p>
+						</blockquote>
+
+						<blockquote class="alert alert-danger">
+							<h4>Interpretação:</h4>
+							<p class="text-justify">Também é caracterizado pela criação de um programa em um nível de abstração acima da linguagem de máquina.</p>
+							<p class="text-justify">As instruções criadas nessa linguagem de "alto nível" são consideradas como entrada para a linguagem de máquina, a execução é feita instrução por instrução de forma sequencial.</p>
+							<p class="text-justify">O programa responsável por executar esta interpretação é chamado de interpretador.</p>
+						</blockquote>
+					 
+						<blockquote>
+							<p class="text-justify">Tais técnicas resultam no conceito de <strong class="label label-danger">máquinas multiníveis</strong> apresentada na tabela a seguir:</p>
+						</blockquote> 
+						<div class="table-responsive">
+							<table class="table table-bordered">        
+								<tbody>
+									<tr>
+										<td>Nível 5</td>
+										<td>Nível de linguagem orientado a problemas</td>
+										<td>Tradução (compilador/interpretador)</td>
+									</tr>
+									<tr>
+										<td>Nível 4</td>
+										<td>Nível de linguagem de montagem (assembly)</td>
+										<td>Tradução (assembler)</td>
+									</tr>
+									<tr>
+										<td>Nível 3</td>
+										<td>Nível de sistema operacional de máquina</td>
+										<td>Híbrido entre ISA e conjunto de instruções do SO (organização de memória, pipeline)</td>
+									</tr>
+									<tr>
+										<td>Nível 2</td>
+										<td>Nível de arquitetura de conjunto de instruções</td>
+										<td>Nível de arquitetura do conjunto de instruções(ISA)</td>
+									</tr>
+									<tr>
+										<td>Nível 1</td>
+										<td>Nível de microarquitetura</td>
+										<td>Unidade Lógica e Aritmética (ULA)</td>
+									</tr>
+									<tr>
+										<td>Nível 0</td>
+										<td>Nível lógico digital</td>
+										<td>Portas lógicas</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<blockquote>
+							<h4>Nível lógico digital:</h4>
+							<p class="text-justify">As portas são o objeto de interesse. Embora, constituídas com componentes analógicos, como transistores, as portas podem ser modeladas com precisão como dispositivos digitais.</p>
+						</blockquote>
+
+						<blockquote>
+							<h4>Nível de microarquitetura:</h4>
+							<p class="text-justify">Formado por um conjunto de 8 a 32 registradores que formam uma memória local e um circuito denominado ULA, que é capaz de executar operações aritméticas simples.</p>
+							<p class="text-justify">Os registradores são conectados à ULA para formar um caminho de dados através do qual os dados transitam.</p>
+						</blockquote>
+
+						<blockquote>
+							<h4>Nível de arquitetura de conjunto de instruções:</h4>
+							<p class="text-justify">Também chamado de nível ISA.</p>
+							<p class="text-justify">Todo fabricante de computadores pública um manual para cada um dos computadores que vende, intitulado "Manual de referência de linguagem de máquina".</p>
+							<p class="text-justify">Esses manuais descrevem o conjunto de instruções.</p>						
+						</blockquote>
+
+						<blockquote>
+							<h4>Nível de sistema operacional de máquina:</h4>
+							<p class="text-justify">Este nível pose ser considerado híbrido por mesclar as instruções do nível ISA com novos conjuntos de instruções, como organização de memória e pipeline.</p>
+						</blockquote> 
+
+						<blockquote>
+							<h4>Nível de linguagem de montagem:</h4>
+							<p class="text-justify">Forma simbólica para uma das linguagens subjacentes.</p>
+							<p class="text-justify">Fornece um método para as pessoas escreverem programas para o nível 1, 2 ou 3, e em seguida interpretado pela máquina real.</p>
+							<p class="text-justify">O programa que realiza a tradução é denominado assembler.</p>
+						</blockquote> 
+
+						<blockquote>
+							<h4>Nível de linguagem orientado a problemas:</h4>
+							<p class="text-justify">Linguagens projetadas para ser usadas por programadores de aplicações que tenham um problema a resolver.</p>
+							<p class="text-justify">Normalmente denominadas como linguagens de alto nível.</p>
+							<p class="text-justify">Programas criados por estas linguagens são traduzidos ou interpretados para os níveis 3 ou 4 (JAVA, C, C++)</p>
+							<p class="text-justify">Programas em JAVA, por exemplo, costumam ser primeiro traduzidos para uma linguagem semelhante à ISA denominada "bytecode", que é então interpretada.</p>
+						</blockquote> 
+						<!-- 
+							<blockquote><p class="text-justify"></p></blockquote> 
+							<img src="img/" alt="" class="img-rounded img-responsive">					
+						-->
 				</div>
   			</li>
 			<li class="list-group-item">
@@ -92,12 +208,12 @@ function showContent(element){
 	var li=$(element).parent();
 
 	if(divContent.hasClass("hide")){
-		li.addClass("active");
+		//li.addClass("active");
 		divContent.removeClass("hide");
 		divContent.addClass("show");	
 		button.text("Esconder");
 	}else{
-		li.removeClass("active");
+		//li.removeClass("active");
 		divContent.removeClass("show");
 		divContent.addClass("hide");	
 		button.text("Exibir");
