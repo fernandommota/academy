@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">		
+
+		<link rel="stylesheet" href="../../../css/styles.css">
+		<link rel="stylesheet" href="../../../lib/bootstrap/css/bootstrap.min.css">
+		
+
+		<script src="../../../js/jquery-2.1.1.min.js"></script>
+		<script src="../../../lib/bootstrap/js/bootstrap.min.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<h3>Datas</h3>
+			<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=400&amp;wkst=1&amp;hl=pt_BR&amp;bgcolor=%23ffffff&amp;src=lno19j9n65nhctft123vn7158s%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FCampo_Grande" style=" border-width:0 " width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+		<hr>
+
+		<h3>Ementa</h3>
+		<ul class="list-group ementa">
+			<li class="list-group-item">
+    			<h4>Fundamentos da Programação Orientada a Objetos</h4>
+    			<ul>
+					<li>Objeto</li>
+					<li>Classe</li>
+					<li>Membros de classe</li>
+				</ul>
+				<!--
+				<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
+				<div class="hide">
+					<hr>
+				</div>
+				-->
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Propriedades da Orientação a Objetos</h4>
+    			<ul>
+					<li>Encapsulamento</li>
+					<li>Herança</li>
+					<li>Polimorfismo</li>
+				</ul>
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Classes e métodos abstratos</h4>    			
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Classes e métodos abstratos</h4>    			
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">tratamento de exceções</h4>    			
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Estudo de Caso envolvendo aplicação Desktop</h4>
+  			</li>
+		</ul>
+
+		<hr>	
+
+		<h3>Bibliografia</h3>
+		<h4>Básica</h4>
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-danger">DEITEL, H.M.; DEITEL, P. J. Java: how to program. 7. ed. New York: Prentice-Hall, 2007.</li>
+			<li class="list-group-item list-group-item-danger">MECENAS, I. Java 2: fundamentos, swing e JDBC. Rio de Janeiro: Alta Books, 2003.</li>
+			<li class="list-group-item list-group-item-danger">POO, D. et al. Object-oriented programming and Java. 2. ed. Berlin: Springer, 2007.</li>
+		</ul>
+
+		<h4>Complementar</h4>
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-info">BOOCH, G. et al. UML – Guia do usuário. 2. ed. Rio de Janeiro: Campus, 2005.</li>
+			<li class="list-group-item list-group-item-info">DEITEL, H. M.; DEITEL, P. J. C++: How to program. 5. ed. New York: Prentice-Hall, 2005.</li>
+			<li class="list-group-item list-group-item-info">GAMMA, E. et al. Design patterns: elements of reusable object-oriented software. New York: Addison-Wesley, 1994.</li>
+		</ul>
+	</body>
+	<script language="javascript" type="text/javascript">
+function showContent(element){
+	var divContent= $(element).next();
+	var button = $(element);
+	var li=$(element).parent();
+
+	if(divContent.hasClass("hide")){
+		//li.addClass("active");
+		divContent.removeClass("hide");
+		divContent.addClass("show");	
+		button.text("Esconder");
+	}else{
+		//li.removeClass("active");
+		divContent.removeClass("show");
+		divContent.addClass("hide");	
+		button.text("Exibir");
+	}	
+}
+	</script>
+</html>
+
+
