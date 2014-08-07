@@ -40,32 +40,206 @@
 		<h3>Ementa</h3>
 		<ul class="list-group ementa">
 			<li class="list-group-item">
-    			<h4>Fundamentos da Programação Orientada a Objetos</h4>
+    			<h4>Organização básica de um computador:</h4>
     			<ul>
-					<li>Objeto</li>
-					<li>Classe</li>
-					<li>Membros de classe</li>
-				</ul>				
+					<li>Processador</li>
+					<li>Memórias</li>
+					<li>Barramentos</li>
+					<li>Dispositivos de E/S</li>
+				</ul>
+				
+				<hr>
+				<!-- *************************   Content ******************************************-->
+    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
+				<div class="hide">
+					
+					<h4>Introdução</h4>
+						<blockquote>
+							<p class="text-justify">Um computador digital é uma máquina que pode resolver problemas para as pessoas executando instruções que lhe são dadas.</p>
+							<p class="text-justify">Uma sequência de instruções que descreve como realizar certa tarefa é denominada <strong>programa</strong>.</p>
+						</blockquote>
+						<blockquote>
+							<p class="text-justify">Os circuitos eletrônicos de cada computador podem reconhecer e executar diretamente um conjunto limitado de instruções simples, e, para que os programas possam ser executados, todos devem antes ser convertidos em instruções.</p>
+						</blockquote>
+						<img src="img/processamento.png" alt="Processamento de Instruções/Dados" class="img-rounded img-responsive">
+						<blockquote>
+							<p class="text-justify">As instruções primitivas formam uma linguagem com a qual pessoas podem se comunicar com computadores. Essa linguagem é denominada <strong>linguagem de máquina</strong></p>
+							<p class="text-justify">Os projetistas de computadores, geralmente fazem com que as instruções sejam as mais simples possíveis, coerentes com os requisitos de utilização e desempenho idealizados para o computador. </p>
+							<p class="text-justify">Como a maioria das linguagens de máquina são simples, todos acham difícil e entendiante usá-la.</p>	
+							<p class="text-justify">Com o passar do tempo, essas observações resultaram em uma série de abstrações. Assim, a complexidade pode ser dominada e sistemas de computação podem ser projetados de modo estruturado, sistemático. Denominamos essa abordagem <strong class="label label-danger">organização estruturada de computadores</strong>.</p>
+						</blockquote> 
+						
+						<blockquote>
+							<p class="text-justify">Portanto, existe uma grande lacuna entre o que é conveniente para as pessoas e o que é conveniente para computadores. As pessoas querem fazer X mas os computadores só podem fazer Y.</p>
+							<p class="text-justify">Para resolver este problema há <strong>duas abordagens (tradução e interpretação)</strong>, ambas envolvem projetar um novo conjunto de instruções que seja mais conveniente para as pessoas usarem do que o conjunto de instruções que já vem embutido na máquina.</p>
+						</blockquote> 	
+
+						<blockquote class="alert alert-danger">
+							<p>Tradução:</p>
+							<ul>
+								<li><p class="text-justify">Caracteriza-se pela criação de um programa em um nível de abstração acima da linguagem de máquina.</p></li>
+								<li><p class="text-justify">As instruções criadas nessa linguagem de "alto nível" são substituídas pelas instruções de linguagem de máquina.</p></li>
+								<li><p class="text-justify">O programa responsável por executar esta substituição é chamado de compilador.</p></li>
+							</ul>
+						</blockquote>
+
+						<blockquote class="alert alert-danger">
+							<h4>Interpretação:</h4>
+							<ul>
+								<li><p class="text-justify">Também é caracterizado pela criação de um programa em um nível de abstração acima da linguagem de máquina.</p></li>
+								<li><p class="text-justify">As instruções criadas nessa linguagem de "alto nível" são consideradas como entrada para a linguagem de máquina, a execução é feita instrução por instrução de forma sequencial.</p></li>
+								<li><p class="text-justify">O programa responsável por executar esta interpretação é chamado de interpretador.</p></li>
+							</ul>						
+						</blockquote>
+					 
+						<blockquote>
+							<p class="text-justify">Tais técnicas resultam no conceito de <strong class="label label-danger">máquinas multiníveis</strong> apresentada na tabela a seguir:</p>
+						</blockquote> 
+						<div class="table-responsive">
+							<table class="table table-bordered">        
+								<tbody>
+									<tr>
+										<td>Nível 5</td>
+										<td>Nível de linguagem orientado a problemas</td>
+										<td>Tradução (compilador/interpretador)</td>
+									</tr>
+									<tr>
+										<td>Nível 4</td>
+										<td>Nível de linguagem de montagem (assembly)</td>
+										<td>Tradução (assembler)</td>
+									</tr>
+									<tr>
+										<td>Nível 3</td>
+										<td>Nível de sistema operacional de máquina</td>
+										<td>Híbrido entre ISA e conjunto de instruções do SO (organização de memória, pipeline)</td>
+									</tr>
+									<tr>
+										<td>Nível 2</td>
+										<td>Nível de arquitetura de conjunto de instruções</td>
+										<td>Nível de arquitetura do conjunto de instruções(ISA)</td>
+									</tr>
+									<tr>
+										<td>Nível 1</td>
+										<td>Nível de microarquitetura</td>
+										<td>Unidade Lógica e Aritmética (ULA)</td>
+									</tr>
+									<tr>
+										<td>Nível 0</td>
+										<td>Nível lógico digital</td>
+										<td>Portas lógicas</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<blockquote>
+							<p>Nível lógico digital:</p>
+								<ul>
+									<li><p class="text-justify">As portas são o objeto de interesse. Embora, constituídas com componentes analógicos, como transistores, as portas podem ser modeladas com precisão como dispositivos digitais.</p></li>
+								</ul>
+						</blockquote>
+
+						<blockquote>
+							<p>Nível de microarquitetura:</p>
+								<ul>
+									<li><p class="text-justify">Formado por um conjunto de 8 a 32 registradores que formam uma memória local e um circuito denominado ULA, que é capaz de executar operações aritméticas simples.</p></li>
+									<li><p class="text-justify">Os registradores são conectados à ULA para formar um caminho de dados através do qual os dados transitam.</p></li>
+								</ul>
+						</blockquote>
+
+						<blockquote>
+							<p>Nível de arquitetura de conjunto de instruções:</p>
+								<ul>
+									<li><p class="text-justify">Também chamado de nível ISA.</p></li>
+									<li><p class="text-justify">Todo fabricante de computadores pública um manual para cada um dos computadores que vende, intitulado "Manual de referência de linguagem de máquina".</p></li>
+									<li><p class="text-justify">Esses manuais descrevem o conjunto de instruções.</p></li>	
+								</ul>				
+						</blockquote>
+
+						<blockquote>
+							<p>Nível de sistema operacional de máquina:</p>
+							<ul>							
+								<li><p class="text-justify">Este nível pose ser considerado híbrido por mesclar as instruções do nível ISA com novos conjuntos de instruções, como organização de memória e pipeline.</p></li>
+							</ul>
+						</blockquote> 
+
+						<blockquote>
+							<p>Nível de linguagem de montagem:</p>
+							<ul>
+								<li><p class="text-justify">Forma simbólica para uma das linguagens subjacentes.</p></li>
+								<li><p class="text-justify">Fornece um método para as pessoas escreverem programas para o nível 1, 2 ou 3, e em seguida interpretado pela máquina real.</p></li>
+								<li><p class="text-justify">O programa que realiza a tradução é denominado assembler.</p></li>
+							</ul>
+						</blockquote> 
+
+						<blockquote>
+							<p>Nível de linguagem orientado a problemas:</p>
+							<ul>
+								<li><p class="text-justify">Linguagens projetadas para ser usadas por programadores de aplicações que tenham um problema a resolver.</p></li>
+								<li><p class="text-justify">Normalmente denominadas como linguagens de alto nível.</p></li>
+								<li><p class="text-justify">Programas criados por estas linguagens são traduzidos ou interpretados para os níveis 3 ou 4 (JAVA, C, C++)</p></li>
+								<li><p class="text-justify">Programas em JAVA, por exemplo, costumam ser primeiro traduzidos para uma linguagem semelhante à ISA denominada "bytecode", que é então interpretada.</p></li>
+							</ul>
+						</blockquote> 
+				
+					<hr>
+					<h4>Histórico</h4>
+						<blockquote>							
+							<p class="text-justify">Primeira geração (1945-1955)</p>
+							<ul>
+								<li>
+									<p class="text-justify">Criação do computador eletrônico motivado pela 2º guerra mundial (dispositivo ENIGMA).</p>
+								</li>
+								<li>		
+									<p class="text-justify">Alan Turing surge como principal mentor do computador COLOSSUS (1943), primeiro computador digital eletrônico do mundo. O projeto ficou em sigilo secreto por 30 anos.</p>
+								</li>
+								<li>	
+									<p class="text-justify">John Mauchley patrocínado pelo exército americano cria o computador ENIAC (1946). Um ano após o fim da guerra acontece a famosa escola de verão que originou vários outros projetos.</p>
+									<img src="img/eniac.jpg" alt="Computador ENIAC" class="img-rounded img-responsive" width="60%">						
+								</li>
+								<li>
+									<p class="text-justify">John Von Neuman desenvolve um projeto para computadores utilizado até os dias de hoje, a <strong>máquina de Von Neuman</strong> é ainda base de quase todos os computadores digitais.</p>
+									<img src="img/arquitetura_von_neumann.png" alt="Arquitetura Von Neumann" class="img-rounded img-responsive" width="30%">
+								</li>
+							</ul>	
+						</blockquote>
+				</div>
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Propriedades da Orientação a Objetos</h4>
+    			<h4 class="list-group-item-heading">Representação de dados e sistemas de numeração</h4>    			
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Álgebra booleana</h4>    			
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Portas lógicas</h4>    			
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Tabela verdade</h4>    			
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Implementação e minimização de funções lógicas</h4>
+  			</li>
+			<li class="list-group-item">
+    			<h4>Circuitos combinacionais básicos:</h4>
     			<ul>
-					<li>Encapsulamento</li>
-					<li>Herança</li>
-					<li>Polimorfismo</li>
+					<li>Multiplexadores</li>
+					<li>Demultiplexadores</li>
+					<li>Decodificadores</li>
+					<li>Codificadores</li>
+					<li>Circuitos aritméticos</li>
 				</ul>
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Classes e métodos abstratos</h4>    			
+    			<h4 class="list-group-item-heading">Temporização</h4>
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Interfaces</h4>    			
-  			</li>
-			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">tratamento de exceções</h4>    			
-  			</li>
-			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Estudo de Caso envolvendo aplicação Desktop</h4>
+    			<h4>Circuitos sequenciais:</h4>
+    			<ul>
+					<li>Flip-flops</li>
+					<li>Registradores</li>
+					<li>Memórias</li>
+				</ul>
   			</li>
 		</ul>
 
