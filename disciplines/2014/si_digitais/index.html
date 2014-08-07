@@ -169,6 +169,10 @@
 								<li><p class="text-justify">Forma simbólica para uma das linguagens subjacentes.</p></li>
 								<li><p class="text-justify">Fornece um método para as pessoas escreverem programas para o nível 1, 2 ou 3, e em seguida interpretado pela máquina real.</p></li>
 								<li><p class="text-justify">O programa que realiza a tradução é denominado assembler.</p></li>
+								<li>
+									<p class="text-justify">Códigos (mnemônicos).</p>
+									<code>ADD AX,BX;</code>
+								</li>
 							</ul>
 						</blockquote> 
 
@@ -176,32 +180,83 @@
 							<p>Nível de linguagem orientado a problemas:</p>
 							<ul>
 								<li><p class="text-justify">Linguagens projetadas para ser usadas por programadores de aplicações que tenham um problema a resolver.</p></li>
-								<li><p class="text-justify">Normalmente denominadas como linguagens de alto nível.</p></li>
+								<li>
+									<p class="text-justify">Normalmente denominadas como linguagens de alto nível. Próximo ao ser humano, escrita de forma textual.</p>
+									<code>
+									SE(A==B) 
+										A=B+C;
+									</code>
+								</li>
 								<li><p class="text-justify">Programas criados por estas linguagens são traduzidos ou interpretados para os níveis 3 ou 4 (JAVA, C, C++)</p></li>
 								<li><p class="text-justify">Programas em JAVA, por exemplo, costumam ser primeiro traduzidos para uma linguagem semelhante à ISA denominada "bytecode", que é então interpretada.</p></li>
 							</ul>
 						</blockquote> 
 				
 					<hr>
-					<h4>Histórico</h4>
-						<blockquote>							
-							<p class="text-justify">Primeira geração (1945-1955)</p>
+					<h4>Arquitetura Básica de Computadores</h4>
+						
+						<img src="img/arquitetura_basica.jpg" alt="Arquitetura Básica" class="img-rounded img-responsive">
+						<blockquote>	
 							<ul>
-								<li>
-									<p class="text-justify">Criação do computador eletrônico motivado pela 2º guerra mundial (dispositivo ENIGMA).</p>
+								<li>Unidade Central de Processamento – CPU:
+									<p>Responsável por todo o processamento (execução de programas) dentro de um computador.</p>
+									<ul>
+										<li>Unidade de Controle – UC
+											<p>Circuito que gera os sinais de controle responsáveis pelo gerenciamento (controle) de todas as atividades do computador.</p>
+										</li>
+										<li>Unidade Lógica e Aritmética – ULA
+											<p>Circuito responsável por efetuar todas as operações lógicas e aritméticas.</p>
+										</li>
+										<li>Registradores de Propósito Geral
+											<p>Elementos de memória (circuitos) responsáveis por armazenar os dados que são utilizados durante a execução de um programa (instruções).</p>
+										</li>							
+									</ul>
 								</li>
-								<li>		
-									<p class="text-justify">Alan Turing surge como principal mentor do computador COLOSSUS (1943), primeiro computador digital eletrônico do mundo. O projeto ficou em sigilo secreto por 30 anos.</p>
+							</ul>
+						</blockquote>
+						<blockquote>
+							<ul>									
+								<li>Hierarquia de Memória:
+									<p>Sistema de memória com objetivo de melhorar o desempenho de um sistema computacional, diminuindo o tempo de acesso médio</p>	
+									<img src="img/hierarquia_memoria.png" alt="Arquitetura Básica" class="img-rounded img-responsive" width="60%">
+									<ul>
+										<li>Registradores da CPU
+											<p>Memória de armazenamento binário, usado para armazenamento temporário da CPU.</p>
+											<p>Memória de alto custo.</p>
+										</li>
+										<li>Memória Cache											
+											<p>Fica entre o processador e a memória RAM.</p>
+											<p>Espaço de armazenamento limitado.</p>
+											<p>Comumente chamadas de L1, L2, L3, LN.</p>	
+										</li>
+										<li>Memória Principal
+											<p>Ex. Memória RAM</p>
+										</li>
+										<li>Memória Secundária
+											<p>Ex. Discos rigidos, disquete, CD-ROM, DVD, Blu-ray</p>
+										</li>							
+									</ul>
+									<!-- http://www.ic.unicamp.br/~pannain/mc404/aulas/slides/obclm2_ppt.pdf -->
 								</li>
-								<li>	
-									<p class="text-justify">John Mauchley patrocínado pelo exército americano cria o computador ENIAC (1946). Um ano após o fim da guerra acontece a famosa escola de verão que originou vários outros projetos.</p>
-									<img src="img/eniac.jpg" alt="Computador ENIAC" class="img-rounded img-responsive" width="60%">						
+							</ul>
+						</blockquote>
+						<blockquote>
+							<ul>
+								<li>Unidade de Entrada e Saída:
+									<ul>
+										<li>Interfaces</li>
+										<li>Canais de E/S</li>		
+										<li>Processadores E/S</li>						
+									</ul>
 								</li>
-								<li>
-									<p class="text-justify">John Von Neuman desenvolve um projeto para computadores utilizado até os dias de hoje, a <strong>máquina de Von Neuman</strong> é ainda base de quase todos os computadores digitais.</p>
-									<img src="img/arquitetura_von_neumann.png" alt="Arquitetura Von Neumann" class="img-rounded img-responsive" width="30%">
+								<li>Barramentos
+									<ul>
+										<li>Barramento de Endereços</li>
+										<li>Barramento de Dados</li>		
+										<li>Barramento de Controle</li>						
+									</ul>								
 								</li>
-							</ul>	
+							<ul>
 						</blockquote>
 				</div>
   			</li>

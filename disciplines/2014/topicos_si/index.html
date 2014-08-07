@@ -15,8 +15,96 @@
 		<![endif]-->
 	</head>
 	<body>
-		
+		<h3>Avisos</h3>
+		<hr>
+		<h3>Horário de atendimento</h3>
+		??
+		<hr>
+		<h3>Avaliação</h3>
+			<ul>
+				<li>2 Provas teóricas: <var>P1</var> e <var>P2</var></li>
+				<li>1 Prova optativa: <var>PO</var></li>
+				<li>1 Trabalhos práticos: <var>T1</var></li>
+				<li>4 Listas de exercício: <var>L1</var>, <var>L2</var>, <var>L3</var> e <var>L4</var></li>
+			</ul>
+			
+			<strong>Média de aproveitamento:</strong> 
+			(((<var>P1</var> + <var>P2</var>) / 2) * 0.6) + (<var>T1</var> * 0.2) + ((<var>L1</var> + <var>L2</var> + <var>L3</var> + <var>L4</var>) * 0.2))) 
+
+		<hr>	
+		<h3>Datas</h3>
+			<strong>As aulas serão ministradas as quartas e sextas-feiras, das 21:00 às 23:00.</strong>
+			<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=400&amp;wkst=1&amp;hl=pt_BR&amp;bgcolor=%23ffffff&amp;src=lno19j9n65nhctft123vn7158s%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FCampo_Grande" style=" border-width:0 " width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+		<hr>
+
+		<h3>Ementa</h3>
+		<ul class="list-group ementa">
+			<li class="list-group-item">
+    			<h4>Fundamentos da Programação Orientada a Objetos</h4>
+    			<ul>
+					<li>Objeto</li>
+					<li>Classe</li>
+					<li>Membros de classe</li>
+				</ul>				
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Propriedades da Orientação a Objetos</h4>
+    			<ul>
+					<li>Encapsulamento</li>
+					<li>Herança</li>
+					<li>Polimorfismo</li>
+				</ul>
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Classes e métodos abstratos</h4>    			
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Interfaces</h4>    			
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">tratamento de exceções</h4>    			
+  			</li>
+			<li class="list-group-item">
+    			<h4 class="list-group-item-heading">Estudo de Caso envolvendo aplicação Desktop</h4>
+  			</li>
+		</ul>
+
+		<hr>	
+
+		<h3>Bibliografia</h3>
+		<h4>Básica</h4>
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-danger">DEITEL, H.M.; DEITEL, P. J. Java: how to program. 7. ed. New York: Prentice-Hall, 2007.</li>
+			<li class="list-group-item list-group-item-danger">MECENAS, I. Java 2: fundamentos, swing e JDBC. Rio de Janeiro: Alta Books, 2003.</li>
+			<li class="list-group-item list-group-item-danger">POO, D. et al. Object-oriented programming and Java. 2. ed. Berlin: Springer, 2007.</li>
+		</ul>
+
+		<h4>Complementar</h4>
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-info">BOOCH, G. et al. UML – Guia do usuário. 2. ed. Rio de Janeiro: Campus, 2005.</li>
+			<li class="list-group-item list-group-item-info">DEITEL, H. M.; DEITEL, P. J. C++: How to program. 5. ed. New York: Prentice-Hall, 2005.</li>
+			<li class="list-group-item list-group-item-info">GAMMA, E. et al. Design patterns: elements of reusable object-oriented software. New York: Addison-Wesley, 1994.</li>
+		</ul>
 	</body>
+	<script language="javascript" type="text/javascript">
+function showContent(element){
+	var divContent= $(element).next();
+	var button = $(element);
+	var li=$(element).parent();
+
+	if(divContent.hasClass("hide")){
+		//li.addClass("active");
+		divContent.removeClass("hide");
+		divContent.addClass("show");	
+		button.text("Esconder");
+	}else{
+		//li.removeClass("active");
+		divContent.removeClass("show");
+		divContent.addClass("hide");	
+		button.text("Exibir");
+	}	
+}
+	</script>
 </html>
 
 
