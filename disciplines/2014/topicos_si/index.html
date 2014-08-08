@@ -39,7 +39,62 @@
 		<h3>Ementa</h3>
 		<ul class="list-group ementa">
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Raciocínio lógico</h4> 						
+    			<h4 class="list-group-item-heading">Raciocínio lógico</h4> 		
+				<hr>
+				<!-- *************************   Content ******************************************-->
+    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
+				<div class="hide">					
+					<h4>Introdução</h4>
+						<blockquote>
+							<p class="text-justify">É impossível ensinar alguém a pensar, já que todas as pessoas já nascem com essa capacidade.</p>
+						</blockquote>
+						<blockquote>
+							<p class="text-justify">Nosso objetivo aqui é o de compreender como desenvolver e aperfeiçoar a técnica de pensamento, no que diz respeito ao raciocínio lógico e matemático. Isso é fundamental para desenvolvermos a nossa capacidade de resolver problemas e de programar computadores.</p>
+						</blockquote>
+						<blockquote>
+							<p class="text-justify">Impor disciplina ao cérebro é um processo que, muitas vezes, produz resultados a longo prazo.</p>
+							<p class="text-justify">Se o seu interesse é obter resultados a curto e médio prazo, é fundamental que haja uma atividade mental constante e muita persistência</p>
+							<p class="text-justify">Devemos estar preparados e motivados para nos dedicarmos a uma prática constante de todos os conceitos vistos em sala de aula. Portanto, leitura, pesquisa e exercícios nunca serão demais nesse processo.</p>
+						</blockquote>
+						<blockquote>
+							<p class="text-justify">Na vida, se temos um objetivo e nos planejamos para alcança-lo, a possibilidade de sucesso torna-se bem maior do que quando n˜ao existe um planejamento.</p>
+							<p class="text-justify">A mesma idéia pode ser aplicada à resolução de problemas e ao desenvolvimento de programas.</p>
+							<p class="text-justify">Nunca devemos começar a programar a partir do nada, pois quando se começa a escrever um programa sem termos pensado e refletido sobre o problema que deu origem a ele, fica difícil visualizá-lo como um todo.</p>
+							<p class="text-justify">O entendimento adequado do programa, a compreens˜ao de sua solução e a criação de um “rascunho” prévio do programa (algoritmo) e da solução s˜ao necessários para a definição da abordagem mais adequada para o problema.</p>
+							<p class="text-justify">Além disso, esquematizar o programa ajuda a fixar exatamente o que se deseja, a economizar tempo em frente ao monitor na tentativa de escrever um programa que cumpra o desejado e a superar as dificuldades que, por ventura, venham a ser encontradas.</p>
+						</blockquote>
+						<blockquote>
+							<p class="text-justify">“Lógica é a ciência que estuda princípios e métodos de inferência, tendo o objetivo principal de determinar em que condições certas coisas se seguem (são consequência), ou não, de outras.” (Mortari, 2001)</p>
+						</blockquote>
+						<blockquote>
+							<p class="text-justify">Em lógica, pode-se distinguir três tipos de raciocínio lógico: dedução, indução e abdução. Dada uma premissa, uma conclusão, e uma regra segundo a qual a premissa implica a conclusão, eles podem ser explicados da seguinte forma (Wikipédia, 2014):
+								<ul>
+									<li>Dedução corresponde a determinar a conclusão. Utiliza-se da regra e sua premissa para chegar a uma conclusão. Exemplo: "Quando chove, a grama fica molhada. Choveu hoje. Portanto, a grama está molhada." É comum associar os matemáticos com este tipo de raciocínio.</li>
+									<li>Indução é determinar a regra. É aprender a regra a partir de diversos exemplos de como a conclusão segue da premissa. Exemplo: "A grama ficou molhada todas as vezes em que choveu. Então, se chover amanhã, a grama ficará molhada." É comum associar os cientistas com este estilo de raciocínio.</li>
+									<li>Abdução significa determinar a premissa. Usa-se a conclusão e a regra para defender que a premissa poderia explicar a conclusão. Exemplo: "Quando chove, a grama fica molhada. A grama está molhada, então pode ter chovido." Associa-se este tipo de raciocínio aos diagnosticistas e detetives.</li>
+								</ul>
+							</p>							
+						</blockquote>	
+						<blockquote>
+							<p class="text-justify">Exemplos de questões de lógica:</p>
+							<ul>
+								<li>vnscdsdnsndv?
+									<button class="btn btn-default" onclick="showContentAnswers(this);">Exibir resposta</button>
+									<div class="hide"> reposta blabla
+									</div>
+								</li>
+									
+							</ul>						
+						</blockquote>	
+						<blockquote>
+							Referências
+							<ul>
+								<li>SIQUEIRA, Marcelo F. Algoritmos e Estrutura de Dados. Mato Grosso do Sul: CCET/CPCX - UFMS, 2007.</li>
+								<li>MORTARI, Cezar A. Introdução à lógica. 1. ed. São Paulo, SP: UNESP, 2001.</li>
+								<li>Wikipédia. Raciocínio lógico. Disponível em http://pt.wikipedia.org/wiki/Racioc%C3%ADnio_l%C3%B3gico - Acessado em 08/08/2014.</li>
+							</ul>
+						</blockquote> 
+				</div>				
   			</li>
 			<li class="list-group-item">
     			<h4 class="list-group-item-heading">Algoritmos</h4>    		
@@ -105,6 +160,23 @@ function showContent(element){
 		divContent.removeClass("show");
 		divContent.addClass("hide");	
 		button.text("Exibir");
+	}	
+}
+function showContentAnswers(element){
+	var divContent= $(element).next();
+	var button = $(element);
+	var li=$(element).parent();
+
+	if(divContent.hasClass("hide")){
+		//li.addClass("active");
+		divContent.removeClass("hide");
+		divContent.addClass("show");	
+		button.text("Esconder resposta");
+	}else{
+		//li.removeClass("active");
+		divContent.removeClass("show");
+		divContent.addClass("hide");	
+		button.text("Exibir resposta");
 	}	
 }
 	</script>
