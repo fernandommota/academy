@@ -61,7 +61,7 @@
 						<blockquote>
 							<p class="text-justify">Os circuitos eletrônicos de cada computador podem reconhecer e executar diretamente um conjunto limitado de instruções simples, e, para que os programas possam ser executados, todos devem antes ser convertidos em instruções.</p>
 						</blockquote>
-						<img src="img/processamento.png" alt="Processamento de Instruções/Dados" class="img-rounded img-responsive">
+						<img src="img/processamento.png" alt="Processamento de Instruções/Dados" class="img-rounded img-responsive center-block">
 						<blockquote>
 							<p class="text-justify">As instruções primitivas formam uma linguagem com a qual pessoas podem se comunicar com computadores. Essa linguagem é denominada <strong>linguagem de máquina</strong></p>
 							<p class="text-justify">Os projetistas de computadores, geralmente fazem com que as instruções sejam as mais simples possíveis, coerentes com os requisitos de utilização e desempenho idealizados para o computador. </p>
@@ -194,10 +194,14 @@
 				
 					<hr>
 					<h4>Arquitetura Básica de Computadores</h4>
-						
-						<img src="img/arquitetura_basica.jpg" alt="Arquitetura Básica" class="img-rounded img-responsive">
+	
+						<img src="img/arquitetura_basica.jpg" alt="Arquitetura Básica" class="img-thumbnail img-responsive center-block">
 					
-						<p>https://www.youtube.com/watch?v=egPA39zBDys</p>
+						<!-- <p>https://www.youtube.com/watch?v=egPA39zBDys</p> -->
+						<iframe width="400" class="center-block media" height="315" src="http://www.youtube.com/embed/egPA39zBDys?rel=0" frameborder="0" allowfullscreen></iframe>
+						<p class="text-muted" style="margin-top:40px" align="center">Arquitetura de Von Neumann:</p>
+	
+						<img src="img/arquitetura_von_neumann.png" alt="Arquitetura de Von Neumann" class="img-thumbnail img-responsive center-block">				
 
 						<blockquote>	
 							<ul>
@@ -224,41 +228,99 @@
 									<img src="img/hierarquia_memoria.png" alt="Arquitetura Básica" class="img-rounded img-responsive" width="60%">
 									<ul>
 										<li>Registradores da CPU
-											<p>Memória de armazenamento binário, usado para armazenamento temporário da CPU.</p>
-											<p>Memória de alto custo.</p>
+											<ul>	
+												<li>Memória de armazenamento binário, usado para armazenamento temporário da CPU.</li>
+												<li>Memória de alto custo.</li>
+											</ul>
 										</li>
-										<li>Memória Cache											
-											<p>Fica entre o processador e a memória RAM.</p>
-											<p>Espaço de armazenamento limitado.</p>
-											<p>Comumente chamadas de L1, L2, L3, LN.</p>	
+										<li>Memória Cache
+											<ul>											
+												<li>Fica entre o processador e a memória RAM.</li>
+												<li>Espaço de armazenamento limitado.</li>
+												<li>Comumente chamadas de L1, L2, L3, LN...</li>	
+											</ul>
 										</li>
 										<li>Memória Principal
-											<p>Ex. Memória RAM</p>
+											<ul>												
+												<li>Exemplo memória RAM</li>
+											</ul>
 										</li>
 										<li>Memória Secundária
-											<p>Ex. Discos rigidos, disquete, CD-ROM, DVD, Blu-ray</p>
+											<ul>												
+												<li>Ex. Discos rigidos, disquete, CD-ROM, DVD, Blu-ray</li>
+											</ul>			
 										</li>							
 									</ul>
 									<!-- http://www.ic.unicamp.br/~pannain/mc404/aulas/slides/obclm2_ppt.pdf -->
 								</li>
+								<li>Memórias (continuação)
+									<p>Semicondutoras</p>
+										<ul>
+											<li>RAM – Random Access Memory : memória de acesso aleatório, volátil.
+												<ul>
+													<li>SRAM – RAM estática: seu conteúdo só se altera quando se escreve nela ou quando se desliga a tensão de alimentação. Exemplo – registradores da CPU, memória cache</li>	
+													<li>DRAM – RAM dinâmica: periodicamente é necessário reescrever o seu conteúdo (refresh de memória) pois há diminuição de cargas elétricas. Exemplo - memória principal.</li>
+												</ul>
+											</li>
+											<li>ROM – Read Only Memory: memória somente de leitura, não volátil.
+												<ul>
+													<li>ROM – gravação feita pelo fabricante da memória, não apagável.</li>
+													<li>PROM – Programmable ROM: programação feita pelo usuário, não apagável.</li>
+													<li>EPROM – Erasable PROM: programação feita pelo usuário, apagável através de luz ultra-violeta.</li>
+													<li>EEPROM – Electrical EPROM: programação feita pelo usuário, apagável eletricamente.</li>
+												</ul>
+											</li>
+											<li>Flash – memória semicondutora, não volátil e de escrita e leitura, apagável.</li>
+										</ul>
+									<p>Magnéticas</p>
+									<ul>
+										<li>Discos – Hard Disk – HDs</li>
+										<li>Opticos – CD-ROM, DVD, etc.</li>
+										<li>Fitas – cartchos, rolos, etc.</li>
+										<img src="img/memorias_magneticas.png" alt="Memórias Magnéticas" class="img-rounded img-responsive" width="60%">
+									</ul>
+								</li>		
 							</ul>
 						</blockquote>
 						<blockquote>
 							<ul>
 								<li>Unidade de Entrada e Saída:
+									<p>Responsável por gerenciar a ligação entre CPU-Memória-barramentos e os periféricos.</p>	
 									<ul>
-										<li>Interfaces</li>
-										<li>Canais de E/S</li>		
-										<li>Processadores E/S</li>						
+										<li>Interfaces
+											<p>Circuitos simples que apenas compatibilizam a comunicação (protocolo). O controle da transferência é feita 
+pela CPU. Exemplo: interface serial RS232, interface paralela, interface USB.</p>											
+										</li>
+										<li>Canais de E/S
+											<p>Circuitos que controlam e compatibilizam a comunicação. A CPU apenas inicia a transferência. Exemplo –
+Controlador de Acesso Direto à Memória (DMA – Direct Access Memory).</p>	
+										</li>		
+										<li>Processadores E/S
+											<p>CPUs dedicadas a fazer E/S de dados. Iniciam e controlam a comunicação.</p> 
+										</li>						
 									</ul>
 								</li>
 								<li>Barramentos
+									<p>Conjunto de fios que fazem a ligação física entre as diversas unidades.</p>
 									<ul>
-										<li>Barramento de Endereços</li>
-										<li>Barramento de Dados</li>		
-										<li>Barramento de Controle</li>						
+										<li>Barramento de Endereços
+											<p>Por onde trafegam os endereços.</p>										
+										</li>
+										<li>Barramento de Dados
+											<p>Por onde trafegam os dados.</p>
+										</li>		
+										<li>Barramento de Controle
+											<p>Por onde trafegam os sinais de controle.</p>										
+										</li>						
 									</ul>								
 								</li>
+							<ul>
+						</blockquote>
+						<blockquote>
+							<p>Referências</p>
+							<ul>
+								<li>Ricardo Pannain - Unicamp MC404 - http://www.ic.unicamp.br/~pannain/mc404/aulas/slides/obclm2_ppt.pdf  - Acessado em 11/08/2014.</li>
+								<li>TANENBAUM, A. S. Organização estruturada de computadores. 5. ed. São Paulo: Pearson Prentice-Hall, 2007.</li>
 							<ul>
 						</blockquote>
 				</div>
