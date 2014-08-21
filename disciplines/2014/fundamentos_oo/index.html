@@ -150,6 +150,67 @@
 					<li>Herança</li>
 					<li>Polimorfismo</li>
 				</ul>
+
+				<!-- *************************   Content ******************************************-->
+    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
+				<div class="hide">
+					<hr>
+					<h4>Herança</h4>
+					
+					<blockquote class="blockquote-reverse">
+						Códigos disponibilizados para esta aula (herança).
+						<a class="btn btn-primary btn-lg" href="files/heranca.zip" target="no_blank" title="Download">
+							<span class="glyphicon glyphicon-download-alt"></span>
+						</a>
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>O conceito de herança esta fundamentado na definição de uma classe com base em outra.</p>
+						<p>A outra classe usada como referencial pode ser chamada de superclasse, classe-mãe, classe-base ou generalização.</p>
+						<p>A nova classe criada a partir da outra passa a ser subclasse, classe-filha, classe derivada ou especialização. Podemos redefinir métodos e criar novos atributos na subclasse.</p>
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>Sobreposição de métodos é quando em herança podemos definir novos métodos e atributos na subclasse, podemos também redefinir um método na subclasse com a mesma assinatura do método da superclasse.</p>
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>Quando criamos um objeto de uma subclasse, devemos lembrar que ao executar o seu construtor primeiramente será executado o construtor da superclasse de forma automática.</p>
+						<p>Podemos executar na subclasse qualquer construtor da superclasse utilizando o comando <strong>super</strong>.</p>
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>Uma classe abstrata é desenvolvida para representar classes e conceitos abstratos.</p>
+						<p>A classe abstrata é sempre uma superclasse que não permite que nenhum objeto seja criado a partir dela, ou seja, não se pode executar a operação de new usando uma classe abstrata.</p>
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>Os modificadores de acesso são palavras reservadas que modificam a forma de acesso a classes, métodos e/ou atributos.</p>
+						<p>Classe final é quando uma classe não pode ser herdada por nenhuma outra. Um exemplo de classe final é a String.</p>
+						<p>A razão para uso do modificador final é garantir certas regras de segurança ou projeto sejam seguidas.</p>
+						<p>Métodos do tipo final não podem ser redefinidos, ou seja, caso você herde de uma classe que contenha métodos com esse modificador, esses métodos não podem ser sobrescritos (override) na subclasse.</p>
+						<p>Por exemplo, você possui um método final <code>validarSenha()</code>, alguém mal-intencionado poderia alterar esse método em uma subclasse e passar a usar esse método em vez do definido pelo arquiteto do sistema.</p>
+					</blockquote>
+
+					<div class="alert alert-success" role="alert"><h4>Exercícios de fixação:</h4>
+						Defina as seguintes classes que representam um sistema de bibliotecas, Ps. para cada livro emprestado um registro de empréstimo deve ser realizado:
+						<ul>
+							<li>Crie a classe Livro com os seguintes atributos: autor, ano de publicação, editora, nome do livro e código.</li>
+							<li>Crie a classe Pessoa com os seguintes atributos: nome, idade, endereço e CPF.</li>
+							<li>Na classe pessoa defina o método <code>imprimirMatricula</code>, onde os atributos nome e CPF devem ser impressos.</li>
+							<li>Crie a classe Docente herdando da classe Pessoa, nesta classe deve ser inserida um atributo que represente o número de matricula geral do docente que possui no máximo 8 caracteres. Ex. "CPCX2014" </li>
+							<li>Na classe Docente defina o método <code>imprimirMatricula</code>, onde os atributos nome e código de matricula geral do docente devem ser impressos.</li>
+							<li>Crie a classe Aluno herdando da classe Pessoa, nesta classe deve ser inserida um atributo que represente o número de matricula geral do aluno que possui no máximo 6 números. Ex. "201418" </li>
+							<li>Na classe Aluno defina o método <code>imprimirMatricula</code>, onde os atributos nome e código de matricula geral do aluno devem ser impressos.</li>
+							<li>Crie a classe abstrata Empréstimo com os seguintes métodos e argumentos:
+								<ul>
+									<li><code>devolver();</code></li>
+									<li><code>renovar(quantidadeDias);</code></li>								
+								</ul>							
+							</li>							
+							<li>Crie as classes EmprestimoDocente e EmprestimoAluno, ambas devem herdar da classe Empréstimo e em seu construtor devem ser instanciados os atributos Livro e Docente, Livro e Aluno respectivamente.</li>
+						</ul>		
+					</div>
   			</li>
 			<li class="list-group-item">
     			<h4 class="list-group-item-heading">Classes e métodos abstratos</h4>    			
