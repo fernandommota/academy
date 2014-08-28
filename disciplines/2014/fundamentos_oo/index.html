@@ -217,6 +217,53 @@
 							<li>Crie as classes EmprestimoDocente e EmprestimoAluno, ambas devem herdar da classe Empréstimo e em seu construtor devem ser instanciados os atributos Livro e Docente, Livro e Aluno respectivamente.</li>
 						</ul>		
 					</div>
+
+					<blockquote class="blockquote">
+						<p>Formas de Herança:</p>
+						<ul>
+							<li><strong>Especialização</strong>. Provavelmente, o uso mais comum de herança é por especialização. Neste uso, a classe nova é uma forma especializada da classe pai, mas satisfaz as especificações da classe pai em todos os aspectos relevantes.</li>
+							<li><strong>Generalização</strong>. Usar herança por generalização é, de certa forma, o oposto de especialização. Aqui, uma subclasse estende o comportamento da classe pai para criar um tipo mais geral de objeto. Generalização é frequentemente aplicada quando construímos uma base de classes existentes que não desejamos modifícar ou não podemos modifícar.</li>
+							<li><strong>Limitação</strong>. Limitação ocorre quando o comportamento da subclasse é menor ou mais restritivo do que o comportamento da classe pai. Assim como generalização, limitação ocorre mais frequentemente quando um programador está construindo sobre uma base de classes existentes que não deveria, ou não pode, ser modifícada.</li>
+							<li><strong>Especificação</strong>. Um uso frequente de herança é para garantir que classes mantenham uma certa interface comum, isto é, implementem os mesmos métodos. A classe pai pode ser uma combinação de operações implementadas e operações que são "deixadas" para ser implementadas pelas classes fílhas. Frequentemente, não há mudança de interface de nenhuma ordem entre a classe pai e a classe fílha: a classe fílha meramente implementa o comportamento descrito, mas não implementado, pela classe pai. Especificação é de fato um caso especial de especialização, exceto que as subclasses não são refinamentos de um tipo existente, mas sim realizações de uma especificação abstrata e incompleta. Em tais casos, a classe pai é algumas vezes conhecida como classe de especificação abstrata.</li>
+							<li><strong>Combinação</strong>. Uma situação comum é uma subclasse representar uma combinação de características de duas ou mais classes pai. Um monitor de ensino pode possuir características tanto de um professor quanto de um estudante e pode, portanto, comportar-se como ambos. A capacidade de uma classe herdar de duas ou mais classes pais é conhecida como herança múltipla.</li>
+						</ul>
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>A Regra "é um" e a Regra "tem um":</p>
+						<ul>
+							<li>Um entendimento de duas formas diferentes de relacionamento entre classes e objetos é fundamental para saber como e quando aplicar técnicas de reuso de software orientado a objetos. Estes dois relacionamentos são conhecidos informalmente como "é um" e "tem um" (ou "parte de").</li>
+							<li>O relacionamento "é um" entre dois conceitos é satisfeito quando o primeiro é uma especialização do segundo.</li>
+							<li>Por exemplo. Florista é um Vendedor, um Cachorro é um Mamífero e assim por diante.</li>
+							<li>Para determinar se o conceito X é uma instância especializada do conceito Y, simplesmente forme a sentença "Um X é um Y". Se a sentença "soa bem", isto é, se ela parece corresponder à experiência do dia-a-dia, você pode assumir que X e Y possuem o relacionamento é um.</li>
+							<li>O relacionamento tem um, por outro lado, é satisfeito quando o segundo conceito é um componente do primeiro, mas os dois não são, em qualquer hipótese, a mesma coisa, não importa quão abstrata seja a generalidade. Por exemplo, um Carro tem um Motor e, claramente, não faz sentido dizer que um Carro é um Motor ou um Motor é um Carro. Entretanto, um Carro é um Veículo, que por sua vez é um Meio De Transporte.</li>
+							<li>Mais uma vez, o teste para o relacionamento tem um é simplesmente formar uma sentença da forma "um X tem um Y" e deixar o senso comum dizer se o resultado soa razoável.</li>
+						</ul>
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>Benefícios do Uso de Herança:</p>
+						<ul>
+							<li><strong>Reusabilidade de código.</strong> Quando comportamento é herdado de uma outra classe, o código que fornece aquele comportamento não precisa ser reescrito. Isto parece óbvio, mas as implicações são importantes. Muitos programadores gastam muito do tempo deles reescrevendo código que eles escreveram muitas vezes antes. Por exemplo, para encontrar um padrão em uma cadeia ou inserir um novo elemento em uma tabela. Com técnicas de orientação a objetos, estas funções podem ser escritas apenas uma vez e reutilizadas.</li>
+							<li><strong>Compartilhamento de código.</strong> Compartilhamento de código ocorre em muitos níveis com técnicas orientadas a objetos. Uma forma de compartilhamento se dá quando muitos usuários ou projetos podem usar as mesmas classes. Uma outra ocorre quando duas ou mais classes desenvolvidas por um único programador como parte de um projeto herda de uma única classe pai. Quando isto acontece, dois ou mais tipos de objetos compartilharão o código que eles herdaram.</li>
+							<li><strong>Consistência de interface.</strong> Quando duas ou mais classes herdam da mesma superclasse, podemos estar certos de que o comportamento que elas herdaram sería o mesmo em todas as classes. Logo, é mais fácil garantir que interfaces para objetos semelhantes sejam, de fato, semelhantes e que o usuário não se depare com um conjunto confuso de objetos que são quase os mesmos mas se comportam e interagem de forma bem diferente.</li>
+							<li><strong>Componentes de software.</strong> Herança permite que programadores construam componentes de software reutilizáveis. O objetivo é permitir o desenvolvimento de aplicações novas que requeiram pouca ou nenhuma codificação. Várias bibliotecas de classes reutilizáveis já se encontram disponíveis comercialmente e podemos esperar muito mais com o passar do tempo.</li>
+							<li><strong>Prototipação rápida.</strong> Quando um sistema de software é grandemente construído com base em componentes reutilizáveis, o tempo de desenvolvimento pode ser concentrado em entender a parte nova do sistema. Logo, sistemas de software podem ser gerados mais facilmente e mais rapidamente, levando a um estilo de programação conhecido como prototipação rápida ou programação exploratória.</li>
+							<li><strong>Ocultamento de informação.</strong> Um programador que reutiliza um componente de software necessita apenas entender a natureza do componente e sua interface. Não há a necessidade do programador ter informação detalhada a respeito de fatos como, por exemplo, as técnicas usadas para implementar o componente. Logo, a interconexão entre sistemas de software é reduzida e, consequentemente, a complexidade também é reduzida.</li>
+						</ul>
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>Custos do Uso de Herança:</p>
+						<ul>
+							<li><strong>Velocidade de execução.</strong> Difícilmente, ferramentas de software de propósito geral são tão rápidas quanto aquelas desenvolvidas cuidadosamente para um propósito específico. Logo, métodos herdados, que devem lidar com subclasses arbitrárias são frequentemente mais lentos do que código especializado. Ainda assim, a preocupação com eficiência é geralmente desnecessária. Primeiro, a diferença e frequentemente pequena. Segundo, a redução em velocidade de execução pode ser balanceada por um aumento da velocidade de desenvolvimento de software. Finalmente, a maioria dos programadores não possui a mínima ideia de como o tempo de execução está sendo usado no programa. É muito melhor desenvolver um sistema que funcione, monitorá-lo para descobrir onde o
+tempo de execução está sendo usado e melhorar aquelas seções, do que gastar uma quantidade desordenada de tempo se preocupando com eficiência no início do projeto.</li>
+							<li><strong>Tamanho do programa.</strong> O uso de qualquer biblioteca de software em geral acarreta o aumento de tamanho do programa, o que não acontece com sistemas construídos através de um projeto específico. Embora este gasto possa ser substancial, quando o custo de memória for reduzido a níveis insignificantes. Conter custos de desenvolvimento e produzir código de alta qualidade e livre de erro são preocupações que se tornaram muito mais importantes do que limitar o tamanho dos programas.</li>
+							<li><strong>Overhead de envio de mensagens.</strong> Muito do que tem sido feito do fato que envio de mensagens é por natureza uma operação mais custosa do que chamada de procedimento. Assim como velocidade de execução, entretanto, a preocupação neste caso também é supervalorizada, pois a diferença nos custos de envio de mensagens e chamada de procedimento é marginal. Talvez, duas ou três instruções adicionais de linguagem de montagem e um gasto adicional de 10 porcento do tempo total. Este custo, como muitos outros, pode ser balanceado pelos benefícios das técnicas de orientação a objetos.</li>
+							<li><strong>Complexidade do programa.</strong> Embora a programação orientada a objetos seja tida como uma solução para a complexidade do software, o uso demasiado de herança pode simplesmente substituir uma forma de complexidade por outra. Entender o uso de controle de um programa que utiliza herança pode requerer várias varreduras no grafo de herança. Isto é conhecido como o problema do iô-iô.</li>							
+						</ul>
+					</blockquote>
+
   			</li>
 			<li class="list-group-item">
     			<h4 class="list-group-item-heading">Classes e métodos abstratos</h4>    			
