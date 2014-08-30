@@ -75,78 +75,6 @@
 							<span class="glyphicon glyphicon-download-alt"></span>
 						</a>
 					</blockquote>
-<!--
-					<blockquote class="blockquote-reverse">
-						Agradecimento ao professor Marcelo Ferreira Siqueira pelo material utilizado nesta aula.
-						<footer><a href="http://lattes.cnpq.br/7340736676138238" target="no_blank">Currículo Lattes</a></footer>
-					</blockquote>
-					<h4>Por Que Orientação a Objetos?</h4>
-					<blockquote>
-							<p>A construção de sistemas de software é um processo intrinsicamente complexo e tem se tornado ainda mais complexo devido aos novos requisitos impostos às aplicações modernas:</p>
-								<ul>
-									<li>Alta confiabilidade</li>
-									<li>Alto desempenho</li>
-									<li>Desenvolvimento rápido e barato</li>
-									<li>Tamanho</li>
-									<li>Grande complexidade</li>
-								</ul>							
-					</blockquote>
-					<blockquote>
-						<p>É possível, e muitas vezes até desejável, utilizar métodos e técnicas que nos permitem ignorar ou reduzir a complexidade de tal processo em algumas de suas etapas, mas isso não faz com que a complexidade desapareça, pois ela certamente aparecerá em uma outra etapa.</p>
-						<p>Os desenvolvedores de software já reconheceram há bastante tempo que a chave para o sucesso no desenvolvimento de softwares está no controle da sua complexidade.</p>
-						<p>O surgimento de linguagens de programação de alto nível e os seus compiladores é um exemplo.</p>
-					</blockquote>
-					<blockquote>
-						<p>Em 1968, na Conferência de Engenharia de Software da NATO (Conference on Software Engineering - Conferência sobre Engenharia de Software da OTAN), utilizou-se pela primeira vez o termo "crise do software" para designar o mal momento que atravessava a indústria de software, que não possuía métodos adequados para suprir suas demandas.</p>
-						Exemplos de problemas encontrados:
-							<ul>
-								<li>Baixa qualidade</li>
-								<li>Alto custo de manutenção</li>
-								<li>Duplicação de esforços no processo de construção</li>
-							</ul>							
-						<p>A partir daí surgiram muitos métodos para o desenvolvimento de software, todos eles com o intuito de superar a tal "crise do software". Neste contexto, surgiu o <strong>paradigma da orientação a objetos</strong>.</p>
-						<p>Muitas são as razões que fazem o paradigma da orientação a objeto um modelo promissor e mais confiável do que os demais para o gerenciamento da complexidade do desenvolvimento de software.</p>
-						Mas talvez a principal razão seja mesmo o simples fato de que todos os bons princípios de projeto de software conhecidos até o momento são inerentes ao modelo de objetos:
-							<ul>
-								<li>Abstração de dados</li>
-								<li>Modularização</li>
-								<li>Encapsulamento</li>
-								<li>Herança e reutilização de código</li>
-							</ul>	
-						<p>O fato de muitos desses princípios existirem antes do surgimento do paradigma da orientação a objetos fez com que o surgimento do modelo de objetos seja visto mais como uma <strong>evolução do que como uma revolução</strong>.</p>
-					</blockquote>
-
-					<hr>
-					<h4>Programação Orientada a Objetos</h4>
-
-					<blockquote>
-						<p>A programação orientada a objetos é frequentemente tida como um novo paradigma de programação.</p>
-						<p>Por paradigma, entendemos um conjunto de teorias, métodos e padrões que juntos representam uma forma de organizar o conhecimento, isto é, uma forma de ver o mundo.</p>			
-					</blockquote>
-					<blockquote>
-						<p>Ao tentarmos entender exatamente o que significa o termo programação orientada a objetos, é interessante examinar a ideia a partir de várias perspectivas. Para tal, considere o seguinte exemplo:</p>						
-						<p><em>Suponha que eu deseje enviar flores para a minha namorada pelo nosso aniversário de namoro. Ela agora está na cidade de Presidente Prudente e, portanto, a quilômetros de Coxim. Obviamente, eu pegar as flores e levá-las pessoalmente até lá está fora de questão. Entretanto, enviá-las para ela é uma tarefa razoavelmente fácil. Eu meramente vou a uma floricultura local, onde trabalha o florista Florisvaldo, informo-lhe o tipo e o número de flores que eu quero enviar e o endereço da minha namorada, e posso estar certo de que as flores serão segura e automaticamente entregues a tempo.</em></p>
-						
-						<ul>
-							<li>O mecanismo que eu usei para resolver o problema da entrega das flores foi encontrar um <strong>agente</strong> adequado (chamado Florisvaldo) e enviá-lo uma <strong>mensagem</strong> contendo a minha solicitação.</li>	
-							<li>É responsabilidade de Florisvaldo cumprir minha solicitação.</li>
-							<li>Há algum método (algum algoritmo ou conjunto de operações) usado por Florisvaldo para fazer o que eu pedi. Esta informação é comumente <strong>ocultada</strong> de mim.</li>
-							<li>Entretanto, se eu investigar, descobrirei que Florisvaldo entrega uma mensagemn ligeiramente diferente para um outro florista em Presidente Prudente. Este florista, por sua vez, toma as devidas providências e passa as flores, através de uma outra mensagem, para seu entregador e assim por diante. Desta forma, minha solicitação é finalmente cumprida por uma sequência de solicitações de um agente para outro.</li>
-							<hr>
-							<li><strong>Nosso primeiro princípio de resolução de problemas de forma orientada objetos é o veículo pelo qual as atividades são iniciadas. Na programação orientada a objetos, a ação é iniciada através da transmissão de uma mensagem para um agente (um objeto) responsável pela ação.</strong></li>
-							<li>A mensagem codifica o pedido de realização da ação e é acompanhada de quaisquer informações adicionais (argumentos) necessários à execução do pedido.</li>
-							<li>O receptor é o agente para quem a mensagem é enviada.</li>
-							<li>Se o receptor aceita a mensagem, ele aceita a responsabilidade de cumprir a ação indicada. Em resposta à mensagem, o receptor executará algum método que satisfaça o pedido.</li>
-							<hr>
-							<li>Embora tenha lidado com Florisvaldo apenas umas poucas vezes, eu tenho uma idéia geral de seu comportamento quando vou a sua loja e apresento a minha solicitação.</li>
-							<li>Eu sou capaz de assumir certas verdades acerca do comportamento dele porque eu tenho alguma informação sobre floristas em geral, e eu espero que Florisvaldo, sendo um membro desta categoria, comporte-se como tal.</li>
-							<li>Podemos usar o termo Florista para representar a categoria (ou <strong>classe</strong>) de todos os floristas.</li>
-							<li><strong>Segundo princípio de programação orientada a objetos: todos os objetos são ocorrências de uma classe.</strong></li>
-							<li>O método invocado por um objeto em resposta a uma mensagem é determinado pela classe do receptor.</li> 
-							<li>Todos os objetos de uma dada classe utilizam o mesmo método em resposta a mensagens similares.</li>
-						</ul>
-					</blockquote>
--->
 				</div>
   			</li>
 			<li class="list-group-item">
@@ -264,6 +192,207 @@ tempo de execução está sendo usado e melhorar aquelas seções, do que gastar
 						</ul>
 					</blockquote>
 
+				<hr>
+				<h4>Polimorfismo</h4>
+					<blockquote class="blockquote">
+						<p>O termpo polimorfismo é originário do grego e significa "muitas formas": <em>poli</em> significa muitas e <em>morphos</em> significa formas.</p>
+						<p>Em linguagens de programação, um objeto polimórfico é qualquer entidade, tal como uma variável ou argumento de função, que pode armazenar valores de tipos diferentes durante o curso de execução de um programa. Funções polimórficas são aquelas que possuem argumentos polimórficos.</p>
+						<p>Polimorfismo é um resultado natural do relacionamento "é um" e dos mecanismos de passagem de mensagem, herança e substituição.</p>												
+					</blockquote>
+					<blockquote class="blockquote">
+						<p>A decisão sobre qual método executar, o da superclasse ou da subclasse ocorre em tempo de execução, ou seja, a chamada ao método permanece o mesmo, o que varia é a execução do operador <code>new</code>.</p>
+<pre>
+public class Pessoa {
+    private String nome;
+    private String endereco;
+    private int rg;
+    
+    public void imprime(){
+        System.out.println("Método imprime da classe Pessoa!"); 
+    }
+}
+
+public class Aluno extends Pessoa{
+    @Override
+    public void imprime(){
+        System.out.println("Método imprime da classe Aluno!");
+    }
+}
+
+public class Main {
+    public static void main(String args[]){
+        <kbd>Pessoa pessoa = new Pessoa();</kbd>
+        <kbd>Pessoa aluno = new Aluno();</kbd>
+        
+        pessoa.imprime();
+        aluno.imprime();
+    }
+}					
+		
+</pre>												
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>Polimorfismo e construtores:</p>
+						<ul>
+							<li>Toda Classe tem pelo menos um construtor, que deve ser definido com o mesmo nome da classe.</li>
+							<li>Toda vez que o objeto for criado pelo operador <code>new</code>, o método construtor correspondente será executado automaticamente.</li>
+<pre>
+public class Pessoa {
+    public Pessoa(){
+        System.out.println("Início do construtor da classe Pessoa!");
+        imprime();
+        System.out.println("Fim do construtor da classe Pessoa!");
+    }
+}
+
+public class Aluno {
+    public Aluno(){
+        System.out.println("Início do construtor da classe Aluno!");
+        imprime();
+        System.out.println("Fim do construtor da classe Aluno!");
+    }
+}
+
+public class Main {
+    public static void main(String args[]){
+        Pessoa aluno = new Aluno();
+    }
+}
+</pre>
+						</ul>
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>O <strong>polimorfismo de sobrecarga</strong> ocorre quando um nome de função está associado a mais de dois corpos de função, ou seja, quando um nome de função for usado mais de uma vez com diferentes tipos de parâmetro.</p>
+<pre>
+public class Pessoa {
+    public void soma(int a, int b){
+        System.out.println("A soma dos inteiros é: "+(a+b));
+    }
+    
+    public void soma(double a, double b){
+        System.out.println("A soma dos reais é: "+(a+b));
+    }
+}
+
+public class Main {
+    public static void main(String args[]){
+        Pessoa aluno = new Aluno();
+
+        aluno.soma(32, 32);
+		aluno.soma(32.43, 32.34);
+    }
+}
+</pre>						
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<p>Algumas linguagens de programação permitem que haja uma conversão implícita entre certos tipos de dados.</p>
+						<p>Estas conversões implícitas são realizadas automaticamente pelo compilador e são denominadas de <strong>coerção</strong>.</p>
+						<p>Coerções são limitadas a situacões onde não há perda de informação, como na conversão de um valor inteiro para o valor real correspondente.</p>
+<pre>
+public class Pessoa {
+    public void soma(double a, double b){
+        System.out.println("A soma dos reais é: "+(a+b));
+    }
+}
+
+public class Main {
+    public static void main(String args[]){
+        Pessoa aluno = new Aluno();
+
+        aluno.soma(32, 32);
+    }
+}
+</pre>					
+					<p>No caso acima, o valor 32 foi coargido para 32.0 pelo compilador JAVA.</p>
+					<hr>
+					<p>Segundo caso:</p>	
+<pre>
+public class Pessoa {
+    public void soma(int a, int b){
+        System.out.println("A soma dos inteiros é: "+(a+b));
+    }
+    
+    public void soma(double a, double b){
+        System.out.println("A soma dos reais é: "+(a+b));
+    }
+}
+
+public class Main {
+    public static void main(String args[]){
+        Pessoa aluno = new Aluno();
+        
+        aluno.soma(7.5,4.3);
+        aluno.soma(7.5,4);
+        aluno.soma(7,4.3);
+        aluno.soma(7,4);
+    }
+}
+</pre>
+					<p>Aqui, notamos a presença tanto de sobrecarga quanto de coerção, pois no segundo e no terceiro envios da mensagem soma, o valor inteiro foi
+coargido para o real correspondente. Já no primeiro e no último envio da mensagem soma, temos apenas sobrecarga.</p>	
+					</blockquote>				
+
+					<div class="alert alert-success" role="alert"><h4>Exercícios de fixação:</h4>
+						<p>1) Qual é a saída produzida pela aplicação a seguir? Justifique sua resposta.</p>	
+<pre>
+public class Sobrecarga {
+
+    public static void main(String args[]) {
+        class A {
+
+            public int foo(int i) {
+                return i + 1;
+            }
+        }
+        class B extends A {
+
+            public int foo(float f) {
+                return (int) (f + 10);
+            }
+        }
+        B b = new B();
+        System.out.println("Surpresa: " + b.foo(2));
+    }
+
+}
+</pre>	
+						<p>2) Considere o trecho de código dado a seguir:</p>
+<pre>
+public class Super {
+
+    public Super() {
+        printThree();
+    }
+
+    void printThree() {
+        System.out.println("three");
+    }
+}
+
+public class Test extends Super {
+
+    int indiana = (int) Math.PI;
+
+    public static void main(String args[]) {
+        Test t = new Test();
+        t.printThree();
+    }
+    
+    void printThree() {
+        System.out.println(indiana);
+    }
+}
+</pre>
+					<ul>
+						<li>(a) Qual é a saída produzida pela aplicação do trecho acima? Justifique sua resposta.</li>
+						<li>(b) Com base neste exemplo, argumente contra o fato de um construtor poder invocar um método que foi sobrescrito.</li>
+					</ul>
+					
+
+					</div>
   			</li>
 			<li class="list-group-item">
     			<h4 class="list-group-item-heading">Classes e métodos abstratos</h4>    			
