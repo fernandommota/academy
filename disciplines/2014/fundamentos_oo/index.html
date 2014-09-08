@@ -80,12 +80,8 @@
 			<li class="list-group-item">
     			<h4 class="list-group-item-heading">Propriedades da Orientação a Objetos</h4>
     			<ul>
-					<li>Encapsulamento</li>
-					<li>Herança</li>
-					<li>Polimorfismo</li>
-				</ul>
-
-				<!-- *************************   Content ******************************************-->
+					<li>Herança
+						<!-- *************************   Content ******************************************-->
     			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
 				<div class="hide">
 					<hr>
@@ -191,7 +187,13 @@ tempo de execução está sendo usado e melhorar aquelas seções, do que gastar
 							<li><strong>Complexidade do programa.</strong> Embora a programação orientada a objetos seja tida como uma solução para a complexidade do software, o uso demasiado de herança pode simplesmente substituir uma forma de complexidade por outra. Entender o uso de controle de um programa que utiliza herança pode requerer várias varreduras no grafo de herança. Isto é conhecido como o problema do iô-iô.</li>							
 						</ul>
 					</blockquote>
-
+			
+			</div>
+					</li>
+					<li>Polimorfismo
+						<!-- *************************   Content ******************************************-->
+    		<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
+			<div class="hide">
 				<hr>
 				<h4>Polimorfismo</h4>
 					<blockquote class="blockquote">
@@ -392,7 +394,199 @@ public class Test extends Super {
 					</ul>
 					
 
-					</div>
+					</div>					
+					</li>
+
+					<li>Encapsulamento
+						<!-- *************************   Content ******************************************-->
+						<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
+						<div class="hide">	
+							<hr>
+							<h4>Encapsulamento</h4>
+
+							<blockquote class="blockquote">
+								<p>O encapsulamento é o processo de proteger os membros de uma classe (atributos e métodos), permitindo que somente os membros necessários (públicos) sejam acessados pelos usuários da classe.</p>
+							</blockquote>
+
+							<blockquote class="blockquote">
+								O encapsulamento apresenta as seguintes vantagens:
+								<ul>
+									<li><strong>Facilidade de manutenção.</strong> A manutenção de classes pode ser efetuada de maneira isolada, ou seja, se um atributo tiver seu formato alterado, os usuários dessa classe poderão continuar a usá-la sem se preocupar com a alteração.</li>
+									<li><strong>Redução do acoplamento.</strong> Quanto menor o acoplamento entre classes, maior pode ser a reutilização dessa classe.</li>
+									<li><strong>Segurança das informações.</strong> Toda comunicação com o objeto ocorre por meio dos métodos modificadores e de acesso (setXXX() e getXXX()), oferecendo segurança na atribuição de novos valores.</li>
+								</ul>
+							</blockquote>
+
+							<blockquote class="blockquote">
+								<p>Há três modificadores de acesso que devem ser explicitamente informados na criação de uma classe, método ou atributo. Esses modificadores são conhecidos por:</p>
+									<ul>
+										<li><strong>public.</strong> O acesso é liberado para qualquer nível de acesso.</li>
+										<li><strong>protected.</strong> O acesso é protegido a nível de pacote e herança (dentro ou fora do mesmo pacote).</li>
+										<li><strong>private.</strong> Quando declarado a classe, método ou atributo são extritamente reservadas a classe em que são declaradas.</li>
+									</ul>
+								<p>A ausência do modificador de acesso faz o membro ser <i>friendly</i> (visível ao nível de pacote).</p>
+							</blockquote>
+
+							<blockquote class="blockquote">
+								<p><strong>Acoplamento fraco e forte:</strong></p>
+								<p>Acoplamento forte (Exemplo 1):</p>
+<pre>
+class Servidor {
+  public void mensagem(MeuTipo x) {
+    // código aqui
+    x.façaAlgo(Object dados); // dados e x estão acoplados
+                              // (se interface de dados mudar x terá que mudar)
+    // mais código
+  }
+}
+</pre>
+								<p>Acoplamento forte (Exemplo 2):</p>
+								<ul>
+									<li>Objeto a manda uma mensagem para objeto b</li>
+									<li>b usa um parâmetro da mensagem para decidir o que fazer</li>
+								</ul>
+<pre>
+class Lampada {
+  public final static int ON = 0;
+
+  public void setLampada(int valor) {
+    if(valor == ON) {
+      // liga lampada
+    } else if(valor == 1) {
+      // desliga lampada
+    } else if(valor == 2) {
+      // pisca
+    }
+  }
+}
+
+Lampada lampapa = new Lampada();
+lampada.setLampada(Lampada.ON);
+lampada.setLampada(2);
+</pre>
+								<p>Acoplamento fraco (Exemplo 2):</p>
+								<ul>
+									<li>Solução: decompor a operação em múltiplas operações primitivas</li>
+								</ul>
+<pre>
+class Lampada {
+  public void on() { // liga lampada }
+  public void off() { // desliga lampada }
+  public void pisca() { // pisca }
+}
+
+Lampada lampada = new Lampada();
+lampada.on();
+lampada.pisca();
+</pre>
+							</blockquote>
+
+							<div class="alert alert-success" role="alert"><h4>Exercícios de fixação:</h4>
+							<p>1) Considere o código fonte a seguir e faça as modificações necessárias utilizando POO.</p>	
+<pre>
+package venda;
+
+private class Carro {
+	public int ano;
+	public String modelo;
+
+	public void setAno(int ano){...}
+	public int getAno(){...}
+	private void setModelo(String modelo){...}
+	private void getModelo(){...}
+}
+
+public class Uno extends Carro {
+	public int numeroSerie;
+
+	public Uno(){
+        super.getModelo();
+    }
+
+	public void setNumeroSerie(int numeroSerie){...}
+	public int getNumeroSerie(){...}
+}
+
+protected class Gol extends Carro {
+	public int numeroSerie;
+
+	public void setNumeroSerie(int numeroSerie){...}
+	public int getNumeroSerie(){...}
+}
+</pre>	
+<pre>
+package aluguel;
+
+private class golVermelho extends Gol {
+	...
+}
+
+private class golVerde extends Gol {
+	...
+}
+
+public class golVerde2 extends golVerde {
+	...
+}
+</pre>
+									<p>2) Considere o trecho de código dado a seguir. Faça um <i>refactory</i> neste código diminuindo o nível de acoplamento.</p>
+<pre>
+public class Pessoa{
+    private String nome;
+    private String endereco;
+	
+	public Pessoa(String nome){
+		this.nome=nome;
+	}
+	public Pessoa(){
+		this.nome="Não informado"
+	}
+
+	.
+	.
+	.
+}
+
+public class Escola{
+    private String nome;
+    private String endereco;
+	
+	.
+	.
+	.
+}
+
+
+public class Aluno{
+	private Pessoa nome;
+	private Escola escola;
+
+	public Aluno(int opcao, String disciplina){
+		if(opcao==1)
+			//realiza matricula
+		else if(opcao==2)
+			//excluí matricula
+		else if(opcao==3)
+			// expulsa aluno
+	}
+	public void insereConceito(Double nota){
+		if(nota>=8)
+			//conceito A
+		else if(nota >=6)
+			//conceito B
+		else
+			//conceito C
+	}
+}
+</pre>
+								
+							</div>
+						</div>			
+					</li>
+				</ul>
+
+				
+			
   			</li>
 			<li class="list-group-item">
     			<h4 class="list-group-item-heading">Classes e métodos abstratos</h4>    			
