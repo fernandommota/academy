@@ -592,10 +592,138 @@ public class Aluno{
     			<h4 class="list-group-item-heading">Classes e métodos abstratos</h4>    			
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Interfaces</h4>    			
+    			<h4 class="list-group-item-heading">Interfaces</h4>
+
+<!-- *************************   Content ******************************************-->
+						<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
+						<div class="hide">	
+							<hr>
+							<h4>Interfaces</h4>
+
+							<blockquote class="blockquote">
+								<p>Um interface em Java não representa exatamente uma classe, mas deve ser gravada em um arquivo próprio com a extensão <i>.java</i>.</p>
+								<p>Em uma interface definimos somente atributos estáticos e constantes e os métodos são todos abstratos.</p>
+								<p>Para definir uma interface devemos usar a palavra reservada <i>interface</i> no lugar da palavra <i>class</i>.
+<pre>
+public interface Mobilidade {
+
+}
+</pre>
+								</p>
+								<p>Para que um classe classe possa usar uma interface é necessário que a classe implemente a interface com o uso da palavra reservada <i>implements</i>.
+<pre>
+public class Robo implements Mobilidade {
+
+}
+</pre>
+								</p>
+								<p>Um exemplo prático do uso de interfaces é a API JDBC presente na linguagem Java. Todos os fabricantes como Sybase, Oracle, Sun e MS SQL Server implementam as interfaces definidas pela API JDBC, mas cada um implementa os métodos dessas interfaces de uma forma diferente.</p>
+								<p>A vantagem está em tornar o uso da API JDBC totalmente independente da implementação usada.</p>	
+							</blockquote>
+
+							<blockquote class="blockquote">
+								Uma interface tem as seguintes características:
+								<ul>
+									<li>Uma interface não pode ser instanciada, mas podem ser definidas referências do seu tipo:
+<pre>
+public interface Mobilidade {
+
+    public void andarFrente();
+    public void andarTras();
+    public void parar();
+    public void virarDireita(int graus);
+    public void virarEsquerda(int graus);
+}
+
+public class Robo implements Mobilidade{
+
+}
+
+public class Main {
+      
+    public static void main(String args[]){
+        Mobilidade robo= new Robo();
+
+    }
+}
+</pre>
+									</li>
+									<li>Todos os métodos definidos são implicitamente do tipo <i>public</i> e <i>abstract</i>. Os métodos não podem ter corpo definido, somente definimos sua assinatura:
+<pre>
+public interface Mobilidade {
+
+    public void andarFrente();
+    public void andarTras();
+    public void parar();
+    public void virarDireita(int graus);
+    public void virarEsquerda(int graus);
+}
+</pre>
+									</li>
+									<li>Uma interface pode estender mais de uma <i>interface</i>. É importante observar que uma classe pode estender (herdar) somente de uma outra classe.
+<pre>
+public interface Mobilidade {
+
+    public void andarFrente();
+    public void andarTras();
+    public void parar();
+    public void virarDireita(int graus);
+    public void virarEsquerda(int graus);
+}
+
+public interface Trajeto {
+    
+    public void destino(Double latitude, Double longitude);
+    
+}
+
+public class Carro implements Mobilidade, Trajeto{
+
+}
+</pre>
+									</li>
+									<li>A classe que implementa uma interface deve obrigatoriamente implementar todos os métodos definidos na interface.</li>
+									<li>Uma interface é formalmente uma classe abstrata, somente com atributos contantes (final) e estáticos (static) e métodos sem corpo. Estes deverão ser implementados pelas classes que irão implementar a interface. É importante observar que os atributos na interface precisam ser inicializados:
+<pre>
+public interface MinhaInterface {
+	public static final int var01 = 100;
+	public static final Double var02 = 90.90;
+
+}
+</pre>
+									</li>
+								</ul>
+							</blockquote>
+
+							<div class="alert alert-success" role="alert"><h4>Exercícios de fixação:</h4>
+								<p>1) Crie um projeto interfaces e crie a interface <i>AreaCalculavel</i>:
+<pre>
+interface AreaCalculavel {
+  double calculaArea();
+}
+</pre>
+									<ul>	
+										<li>Agora crie a classe Quadrado e Retangulo, ambas devem implementar a interface <i>AreaCalculavel</i>, lebrando que para calcular a área do quadrado você precisa inserir um atributo inteiro <i>lado</i> e, para calcular a área do retangulo você precisa inserir os atributos <i>largura</i> e <i>altura</i>, ambas de tipo inteiro.
+										</li>
+									</ul>
+								</p>
+								<p>2) Nosso banco precisa tributar dinheiro de alguns bens que nossos clientes possuem. Para isso, vamos criar uma interface <i>Tributavel</i>:
+<pre>
+public interface Tributavel {
+  double calculaTributos();
+}
+</pre>
+Alguns bens são tributáveis e outros não, <i>ContaPoupanca</i> não é tributável, já para <i>ContaCorrente</i> você precisa pagar 1% da conta e o <i>SeguroDeVida</i> tem uma taxa fixa de 42 reais.
+<img src="img/exercicio2_interface.PNG" alt="Diagrama de Classes" class="img-thumbnail img-responsive center-block">
+Baseado no diagrama de classes acima, implemente as classes e métodos necessários para o cálculo dos tributos do nosso banco.
+								
+								</p>
+																
+							</div>
+						</div>    			
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">tratamento de exceções</h4>    			
+    			<h4 class="list-group-item-heading">Tratamento de exceções</h4>    			
   			</li>
 			<li class="list-group-item">
     			<h4 class="list-group-item-heading">Estudo de Caso envolvendo aplicação Desktop</h4>
