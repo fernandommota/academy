@@ -760,7 +760,258 @@ Baseado no diagrama de classes acima, implemente as classes e métodos necessár
 						</div>    			
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Tratamento de exceções</h4>    			
+    			<h4 class="list-group-item-heading">Tratamento de exceções</h4>   
+
+				<!-- *************************   Content ******************************************-->
+    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
+				<div class="hide">
+					<hr>				
+					<h3>Tratamento de Exceções</h3>
+					<blockquote>
+						O tratamento de excessão oferece um poderoso mecanismo para evitar que um programa Java pare de funcionar de forma inesperada e permite que o erro seja analisado e o programa continue a ser executado normalmente.
+					</blockquote>
+					<blockquote>
+						Um excessão deve ser vista como um retorno alternativo da execução de algum método.
+						<ul>
+							<li>O processo de gerar uma exceção é chamado de <strong>lançamento de exceção</strong>, e o de processar uma excessão é chamado de <strong>captura da exceção</strong>.
+<pre>
+import java.util.Scanner;
+
+public class ExemploCapturaExcecao {
+	public static void main(String[] args) {
+		double nota = 0.0;
+		System.out.println("Entre com uma nota: ");
+		Scanner s = new Scanner(System.in);
+		nota = s.nextInt();
+
+		try {
+			if (nota >= 70) {
+				// lancando a excecao
+				throw new Exception("Aprovado");
+			} else if ((nota >= 40) && (nota < 70)) {
+				throw new Exception("Exame");
+			} else {
+				throw new Exception("Reprovado");
+			}
+			// capturando a excecao
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}
+</pre>
+</li>
+							
+						</ul>
+					</blockquote>
+
+					<blockquote>
+						Comandos try e catch
+						<ul>
+							<li>Toda exceção lançada representa um objeto que armazena informações sobre a ocorrência de um erro ou alguma situação não-usual do programa, como a impossibilidade de realizar um saque. Caso uma exceção não seja capturada por nenhum método do programa, o programa irá terminar com erro.</li>
+							<li>Para capturar um exceção devemos colocar o código passível de lançamento de exceção em um bloco dos comandos try e catch.</li>
+							<li>Todas as linhas que podem lançar um exceção devem ficar no bloco try.</li>
+							<li>Para capturar a exceção devemos usar a palavra catch.</li>
+							<li>Um bloco try pode estar relacionado a mais de uma bloco catch, mas um bloco try sozinho apresenta erro de compilação.</li>
+							<li>Cada bloco catch manipula um tipo de exceção indicado por seu parâmetro. O tipo do parâmetro indica o tipo de exceção a ser tratada pelo bloco catch e deve ser uma classe que se estenda da classe <i>Throwable</i>.</li>
+						</ul>
+<pre>
+public class ExemploCatchSeletivo {
+
+    public static void main(String args[]) {
+            
+        try {
+            int num = Integer.parseInt(args[0]);
+            int num2 = Integer.parseInt(args[1]);
+            //int num=40, num2=50;
+            System.out.println(num);
+            System.out.println(num / num2);
+            if (num2 > num) {
+                throw new Exception("Segundo parâmetro maior que o primeiro");
+            }
+        } catch (ArrayIndexOutOfBoundsException e1) {
+            System.out.println("Não foi fornecido um argumento.");
+        } catch (NumberFormatException e2) {
+            System.out.println(" Argumento não é um inteiro.");
+        } catch (ArithmeticException e1) {
+            System.out.println(" Divisão de número por zero.");
+        } /*
+         * caso o bloco contendo a classe Exception seja colocado antes dos
+         * outros tipos de exceptions darao erro de compilacao.
+         */ catch (Exception e1) {
+            System.out.println("Erro geral.");
+        }
+    }
+}
+</pre>
+					</blockquote>
+					<blockquote>
+						Comando <i>throw</i>
+						<ul>
+							<li>É importante observar que antes de ser possível capturar uma exceção com o comando catch precisamos lança-la com o comando <i>throw</i>.</li>
+							<li>Não podemos confudir com o comando <i>throws</i> usado na assinatura dos métodos para formalizar que o método lança uma exceção em vez de capturá-lo.</li>
+							<li>Qualquer código pode usar o comando <i>throw</i> para realizar o lançamento de uma exceção.</li>							
+						</ul>
+					</blockquote>
+
+					<blockquote>
+						Hierarquia das Classes de Exceção Java
+						
+						<ul>
+							<li>A plataforma Java fornece uma numerosa quantidade de classes de exceção para uso nas mais diferentes situações de erro.</li>
+							<li>As classes Error, Exception e RuntimeException definem os três diferentes tipos de exceções que podemos ter.</li>
+							<li><img src="img/hierarquia_excecoes.gif" alt="Hierarquia de Classes de Exceções em JAVA" class="img-thumbnail img-responsive center-block"></li>
+							<li>Como podemos observar na figura, a superclasse de todas as classes responsáveis pelo tratamento de erros é a classe Throwable. As classes Error e Exception são suas subclasses diretas.</li>
+							<li>A classe Error deve ser usada para o tratamento de erros graves geralmente causados pelo mau funcionamento de dispositivos de hardware. Nenhum programa Java deve lançar ou capturar esse tipo de exceção.</li>
+							<li>A classe Exception é a superclasse de todas as exceções possíveis de serem lançadas por problemas no momento da execução do programa em Java. Qualquer exceção desenvolvida pelo programador sempre deverá estended a classe Exception. Exceções que estendem a classe Exception definem exceções do tipo <i>checked</i>.</li>
+							<li>A classe RuntimeException que estende Exception define que uma exceção será classificada como <i>unchecked</i>, ou seja, exceções que não precisam ser explicitamente informadas na assinatura do método quando for possível lançá-las, por exemplo:
+								<ul>
+									<li>NullPointerException</li>
+									<li>IndexOutofBoundsException</li>
+									<li>ArithmeticException</li>
+								</ul>
+</li>
+						</ul>
+					</blockquote>
+
+					<blockquote>
+						Métodos da Classe <i>throwable</i>
+						<ul>
+							<li>String getMessage() - Este método retorna a descrição usada na criação da exceção.</li>
+							<li>void printStacktrace() - Este método apresenta todas as informações da pilha no momento da exceção, ou seja, exibe qual o método gerou a exceção e quais métodos tinham sido executados no momento do erro.</li>
+						</ul>
+					</blockquote>
+
+					<blockquote>
+						Comando <i>finally</i>
+						<ul>
+							<li>Um finally sempre será executado após um bloco try.</li>
+							<li>Todas as linhas de um bloco finally serão executados mesmo que ocorra o lançamento de uma exceção.</li>
+							<li>Como boa prática devemos sempre realizar o fechamento de arquivos, conexões com banco de dados e a liberação de algum outro recurso em um bloco finally.</li>
+						</ul>
+					</blockquote>
+
+					<blockquote>
+						Como criar classes de negócio para tratamento de exceções</i>
+						<p>Primeiro é preciso definir se a classe estenderá a Exception ou RuntimeException. Adicionar atributos necessários para o controle de erro, pois ajudarão na identificação e solução do problema. Como boa prática, uma classe deve ter pelo menos quatro métodos.</p>
+						<ul>
+							<li>1º) A classe deve ter um construtor sem argumentos executando o constrututor da superclasse.
+<pre>
+public MyClassException() {
+			super();
+	}
+</pre>
+</li>
+							<li>2º) No segundo, deve haver um construtor que receba um objeto do tipo throwable.
+<pre>
+	public MyClassException(Throwable arg0) {
+			super(arg0);
+	}
+</pre>
+</li>
+							<li>3º) No terceiro, deve haver um construtor que receba uma String e um objeto do tipo Trowable. 
+<pre>
+public MyClassException(String arg0, Throwable arg1) {
+	super(arg0, arg1);
+}
+</pre>
+</li>
+							<li>4º) No quarto, deve haver um construtor que receba uma String. Esse método poderá transportar a mensagem de erro gerada.
+<pre>
+	public MyClassException(String p_str) {
+			super(p_str);
+	}
+</pre></li>
+						</ul>
+
+Exemplo completo:
+<pre>
+public class MyClassException extends Exception {
+	private String mensagem = " ";
+	private String classe = " ";
+	private String pacote = " ";
+	private String metodo = " ";
+	public MyClassException() {
+			super();
+	}
+	public MyClassException(String p_str) {
+			super(p_str);
+	}
+	public MyClassException(Throwable arg0) {
+			super(arg0);
+	}
+	public MyClassException(String arg0, Throwable arg1) {
+			super(arg0, arg1);
+	}
+	public void setClasse(String pclasse) {
+			this.classe = pclasse;
+	}
+	public String getClasse() {
+			return this.classe;
+	}
+	public void setMensagem(String pmensagem) {
+			this.mensagem = pmensagem;
+	}
+	public String getMensagem() {
+			return this.mensagem;
+	}
+	public void setPacote(String ppacote) {
+			this.pacote = ppacote;
+	}
+	public String getPacote() {
+			return this.pacote;
+	}
+	public void setMetodo(String pmetodo) {
+			this.metodo = pmetodo;
+	}
+	public String getMetodo() {
+			return this.metodo;
+	}
+}
+</pre>
+					</blockquote>
+
+<div class="alert alert-success" role="alert"><h4>Exercícios de fixação:</h4>
+<p>1) Construa uma classe de tratamento de exceções para a classe a seguir.</p>	
+<pre>
+import java.util.Scanner;
+/**
+ *
+ * @author fernandommota
+ */
+public class inverteValores {
+    
+    public inverteValores(){
+        int i, temp;
+        Scanner s = new Scanner(System.in);
+        
+        System.out.println("Insira um valor para N:");
+        int n = s.nextInt();
+        
+        int vetor[] = new int[n];
+        for(i=0; i< n; i++){
+           System.out.println("Insira um valor para a posição "+(i+1)+":");
+           vetor[i] = s.nextInt();
+        }        
+        
+        for(i=0; i< (n/2); i++){
+           temp=vetor[i];
+           vetor[i] = vetor[(n-i)-1];
+           vetor[(n-i)-1] = temp;
+        }
+        
+        for(i=0; i< n; i++){
+            System.out.println("Posição ["+(i+1)+"]: "+vetor[i]);
+        }
+    }
+    
+    public static void main(String args[]){
+        inverteValores obj= new inverteValores();
+    }
+}
+</pre>							
+					</div>	
+				</div> 			
   			</li>
 			<li class="list-group-item">
     			<h4 class="list-group-item-heading">Estudo de Caso envolvendo aplicação Desktop</h4>
