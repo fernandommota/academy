@@ -893,7 +893,7 @@ Having trouble with this project? Feel free to send us an e-mail at info@it4biz.
     <documentation_url>https://github.com/it4biz/pentaho-ce-audit/</documentation_url>
     <description>
       <![CDATA[
-               <h3>What is Pentaho CE Audit Plugin?</h3> 
+               <h3><b>What is Pentaho CE Audit Plugin?</b></h3> 
 
 <p>It is an open source project that helps Pentaho BI Admin users to visualize statistics like:</p>
 
@@ -905,7 +905,7 @@ Having trouble with this project? Feel free to send us an e-mail at info@it4biz.
 </ul>
 
 <p color="red"> This plug-in will apply automatically an Environment configuration, if you want to know more about it please visit 
-the link <a target='NO_BLANK' href='http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html'>Pentaho InfoCenter</a>
+the link <a target='NO_BLANK' href='http://infocenter.pentaho.com/help48/index.jsp?topic=%2Fadmin_guide%2Ftask_switching_to_file_based_logging.html'>Pentaho InfoCenter.</a>
 </p>
 
 <p>For more information <a target='NO_BLANK' href='https://github.com/it4biz/pentaho-ce-audit/'>visit our site</a>.</p>
@@ -918,7 +918,17 @@ the link <a target='NO_BLANK' href='http://infocenter.pentaho.com/help48/index.j
     <author_logo>http://www.it4biz.com.br/extras/logo-it4biz-wordpress.png</author_logo>
     <license>ASL 2.0</license>
     <dependencies>CDF, CDA, CDE</dependencies>
+	<installation_notes>
+      <![CDATA[You can run the Pentaho CE Audit Installer as an administrator from
+               the Tools menu. The installer will make some Environment configurations, requiring a reboot in the end.  <br /><br />
 
+Please note that if you upgrade Pentaho CE Audit, you will
+need to run the Pentaho CE Audit Installer again. <br /><br/>
+
+Is necessary make a refresh data, always that you want do new analysis.
+
+      ]]>
+	</installation_notes>
     <versions>
       <version>
         <branch>TRUNK</branch>
@@ -934,7 +944,7 @@ the link <a target='NO_BLANK' href='http://infocenter.pentaho.com/help48/index.j
           <lane>Community</lane>
           <phase>2</phase>
         </development_stage>
-      </version>
+	 </version>
     </versions>
     <screenshots>
       <screenshot>https://sourceforge.net/p/pentahoceaudit/screenshot/home.png</screenshot>
