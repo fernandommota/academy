@@ -613,8 +613,7 @@
       instrument that sits on 2 major cornerstones of the Pentaho
       ecosystem: Ctools and PDI. Aiming to leverage as much as possible
       of our existing stack, anyone familiar with those tools will be
-      able to build plugins.
-    </description>
+      able to build plugins.</description>
     <author>Webdetails</author>
     <author_url>http://webdetails.pt</author_url>
     <author_logo>http://www.webdetails.pt/ficheiros/wd_logo.png</author_logo>
