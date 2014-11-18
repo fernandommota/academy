@@ -937,8 +937,7 @@ Is necessary make a refresh data, always that you want do new analysis.
         <package_url>
           http://sourceforge.net/projects/pentahoceaudit/files/1.0/pentaho-ce-audit-1.0-alpha.zip/download
         </package_url>
-        <description>1.0 Alpha
-        </description>
+        <description>2014.11.17 (TRUNK)</description>
         <min_parent_version>5.0</min_parent_version>
         <development_stage>
           <lane>Community</lane>
