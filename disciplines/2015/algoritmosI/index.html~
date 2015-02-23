@@ -9,64 +9,35 @@
 
 		<script src="../../../js/jquery-2.1.1.min.js"></script>
 		<script src="../../../lib/bootstrap/js/bootstrap.min.js"></script>
-		<title>Tópicos em Sistemas de Informação</title>
+		<title>Algoritmos e Programação I</title>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	</head>
 	<body>
 		<h3>Avisos</h3>
-			<blockquote>				
-				<a class="btn btn-primary btn-lg" href="files/lista1.pdf" target="no_blank" title="Download">
-					<span class="glyphicon glyphicon-download-alt"></span>
-				</a>
-				<strong>lista 1</strong>
-
-				<a class="btn btn-primary btn-lg" href="files/controle_repeticao.zip" target="no_blank" title="Download">
-					<span class="glyphicon glyphicon-download-alt"></span>
-				</a>
-				<strong>Gabarito lista 1</strong>
-
-			</blockquote>
-
-			<blockquote class="alert">				
-				<a class="btn btn-primary btn-lg" href="files/lista2.pdf" target="no_blank" title="Download">
-					<span class="glyphicon glyphicon-download-alt"></span>
-				</a>
-				<strong>lista 2</strong>
-			</blockquote>
-
-			<blockquote class="alert">				
-				<h3>lista 3</h3>
-				<p>Exercícios 3, 10, 11 e 12 da lista de exercícios de módulos. <br>
-				Entregar até às 23:59 do dia 25/10/2014. <br>
-				Enviar arquivo zip com códigos fontes para mota.fernandomaia@gmail.com</p>
-			</blockquote>
-
-			<blockquote class="alert alert-warning">				
-				<a class="btn btn-primary btn-lg" href="files/lista4.pdf" target="no_blank" title="Download">
-					<span class="glyphicon glyphicon-download-alt"></span>
-				</a>
-				<strong>lista 4</strong>
-			</blockquote>	
+			
 		<hr>
 		<h3>Horário de atendimento</h3>
-		??
+			<ul>
+				<li>Professor: ??</li>
+				<li>Monitor: ??</li>
+			</ul>
 		<hr>
 		<h3>Avaliação</h3>
 			<ul>
-				<li>2 Provas teóricas: <var>P1</var> e <var>P2</var></li>
+				<li>3 Provas teóricas: <var>P1</var>, <var>P2</var> e <var>P3</var></li>
 				<li>1 Prova optativa: <var>PO</var></li>
-				<li>4 Listas de exercício: <var>L1</var>, <var>L2</var>, <var>L3</var> e <var>L4</var></li>
+				<li>1 trabalho prático <var>T1</var></li>
 			</ul>
 			
 			<strong>Média de aproveitamento:</strong> 
-			(((<var>P1</var> + <var>P2</var>) / 2) * 0.5) + ((<var>L1</var> + <var>L2</var> + <var>L3</var> + <var>L4</var>)/4 * 0.5))) 
+			(((<var>P1</var> + <var>P2</var>+ <var>P3</var>) / 3) * 0.8) + (<var>T1</var> * 0.2) 
 
 		<hr>	
 		<h3>Datas</h3>
-			<strong>As aulas serão ministradas aos sábados, das 08:00 às 12:00.</strong>
-			<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=400&amp;wkst=1&amp;hl=pt_BR&amp;bgcolor=%23ffffff&amp;src=u51tchphnqsfggnb9to7piseds%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FCampo_Grande" style=" border-width:0 " width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+			<strong>As aulas serão ministradas as segundas e quartas-feiras, das 19:00 às 23:00.</strong>
+			<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=400&amp;wkst=1&amp;hl=pt_BR&amp;bgcolor=%23ffffff&amp;src=0e50hlm2lslk9757pii2ptiil%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FCampo_Grande" style=" border-width:0 " width="100%" height="400" frameborder="0" scrolling="no"></iframe>
 		<hr>
 
 		<h3>Ementa</h3>
@@ -91,10 +62,10 @@
 							<p class="text-justify">Devemos estar preparados e motivados para nos dedicarmos a uma prática constante de todos os conceitos vistos em sala de aula. Portanto, leitura, pesquisa e exercícios nunca serão demais nesse processo.</p>
 						</blockquote>
 						<blockquote>
-							<p class="text-justify">Na vida, se temos um objetivo e nos planejamos para alcança-lo, a possibilidade de sucesso torna-se bem maior do que quando n˜ão existe um planejamento.</p>
+							<p class="text-justify">Na vida, se temos um objetivo e nos planejamos para alcança-lo, a possibilidade de sucesso torna-se bem maior do que quando não existe um planejamento.</p>
 							<p class="text-justify">A mesma idéia pode ser aplicada à resolução de problemas e ao desenvolvimento de programas.</p>
 							<p class="text-justify">Nunca devemos começar a programar a partir do nada, pois quando se começa a escrever um programa sem termos pensado e refletido sobre o problema que deu origem a ele, fica difícil visualizá-lo como um todo.</p>
-							<p class="text-justify">O entendimento adequado do programa, a compreensão de sua solução e a criação de um “rascunho” prévio do programa (algoritmo) e da solução s˜ão necessários para a definição da abordagem mais adequada para o problema.</p>
+							<p class="text-justify">O entendimento adequado do programa, a compreensão de sua solução e a criação de um “rascunho” prévio do programa (algoritmo) e da solução são necessários para a definição da abordagem mais adequada para o problema.</p>
 							<p class="text-justify">Além disso, esquematizar o programa ajuda a fixar exatamente o que se deseja, a economizar tempo em frente ao monitor na tentativa de escrever um programa que cumpra o desejado e a superar as dificuldades que, por ventura, venham a ser encontradas.</p>
 						</blockquote>
 						<blockquote>
@@ -265,141 +236,44 @@
 				</div>				
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Algoritmos</h4>    		
+    				<h4 class="list-group-item-heading">Variáveis e Tipos de Dados</h4>
+				<ul>
+					<li>inteiros, reais, booleanas, literais, caracter</li>
+				</ul>	    		
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Estruturas de Controle</h4>    			
+    				<h4 class="list-group-item-heading"> Estrutura Sequencial</h4>
+				<ul>
+					<li>entrada e saída de dados</li>
+				</ul>    			
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Estruturas de Repetição</h4>
-				<!-- *************************   Content ******************************************-->
-    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
-				<div class="hide">
-					<hr>
-					<blockquote>
-						Exercícios de fixação (Estruturas de controle e de repetição)
-						<a class="btn btn-primary btn-lg" href="files/exercicios_fixacao.pdf" target="no_blank" title="Download">
-							<span class="glyphicon glyphicon-download-alt"></span>
-						</a>
-					</blockquote> 				
-				</div>  			    			
+    				<h4 class="list-group-item-heading">Estrutura Condicional</h4>	
+				<ul>
+					<li>se.. então</li>
+					<li>se .. senão</li>
+					<li>senão.. se .. então</li>
+					<li>escolha</li>
+				</ul> 			
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Vetores</h4>    	
-				<!-- *************************   Content ******************************************-->
-    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
-				<div class="hide">
-					<hr>
-					<h4>Exercícios exemplo:</h4>
-
-					<blockquote>
-						1) Calcule a média aritmética das notas de 5 alunos de uma disciplina e determine o número de alunos que tiveram nota superior à média calculada.
-					</blockquote>
-
-					<blockquote>
-						2) Escreva um algoritmo que declare uma variável de um tipo vetor de 10 elementos inteiros, leia 10 valores para esta variável e então escreva o maior e o menor valor do vetor e suas respectivas posições no vetor. 
-					</blockquote> 	
-
-					<blockquote>
-						3) Escreva um algoritmo que recebe um inteiro 0 < n ≤ 100 e um vetor de n números inteiros cuja primeira posição é 1 e inverte a ordem dos elementos do vetor sem usar outro vetor. 
-					</blockquote>			
-
-					<blockquote>
-						4) Escreva um algoritmo que recebe um inteiro 0 < n ≤ 100 e um vetor de n números inteiros embaralhados e ordene este algoritmo em tempo linear. 
-					</blockquote>	
-
-					<blockquote>	
-						Exercícios de fixação			
-						<a class="btn btn-primary btn-lg" href="files/exercicios_fixacao_vetores.pdf" target="no_blank" title="Download">
-							<span class="glyphicon glyphicon-download-alt"></span>
-						</a>
-						</br>
-						Código exemplo counting sort!		
-						<a class="btn btn-primary btn-lg" href="files/CountingSort.java" target="no_blank" title="Download">
-							<span class="glyphicon glyphicon-download-alt"></span>
-						</a>
-			
-					</blockquote>
-				</div> 		
+    				<h4 class="list-group-item-heading">Estruturas de Repetição</h4>	
+				<ul>
+					<li>para</li>
+					<li>enquanto</li>
+					<li>faça.. enquanto</li>
+					<li>escolha</li>
+				</ul> 			  
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Matrizes</h4>
-				<!-- *************************   Content ******************************************-->
-    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
-				<div class="hide">
-					<hr>
-					<h4>Exercícios exemplo:</h4>
-					<blockquote>
-						1) Escreva um algoritmo que declare uma variável <var>A</var> de um tipo matriz de 4 por 5 elementos numéricos (4 linhas e 5 colunas), leia valores para esta variável e escreva A<sup>t</sup>.
-					</blockquote>
-
-					<blockquote>
-						2) Escreva um algoritmo que declare uma variável de um tipo matriz de 4 por 5 elementos numéricos (4 linhas e 5 colunas), leia valores para esta variável e escreva a soma dos elementos de cada linha da matriz, bem como a soma de todos os elementos.
-					</blockquote>
-
-					<blockquote>
-						3) Dadas duas matrizes A<sub>n×m</sub> e B<sub>m×n</sub>. Obter a matriz matriz C<sub>m×p</sub> onde C = AB.
-						<p>lembrando que:
-							<ul>
-								<li>O produto de matrizes não é comutativo (A.B &ne; B.A)</li>
-								<li>Sendo A<sub>n×m</sub>.B<sub>p×q</sub>, obrigatoriamente <var>m=p</var></li>
-								<li>E a matriz resultante será (AB)<sub>n×q</sub></li>
-							</ul>
-						</p>
-	
-					</blockquote> 	
-
-					<blockquote>	
-						Exercícios de fixação			
-						<a class="btn btn-primary btn-lg" href="files/matrizes.pdf" target="no_blank" title="Download">
-							<span class="glyphicon glyphicon-download-alt"></span>
-						</a>
-						
-					</blockquote>
-				</div>
+    				<h4 class="list-group-item-heading">Variáveis Compostas Homogêneas e Heterogêneas</h4>  
+				<ul>
+					<li>vetores</li>
+					<li>matrizes</li>
+				</ul> 
   			</li>
 			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Registros</h4>
-				<!-- *************************   Content ******************************************-->
-    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
-				<div class="hide">
-					<hr>
-					<blockquote>
-						Exercícios de fixação (Registros)
-						<a class="btn btn-primary btn-lg" href="files/registros.pdf" target="no_blank" title="Download">
-							<span class="glyphicon glyphicon-download-alt"></span>
-						</a>
-					</blockquote> 				
-				</div>  
-  			</li>
-			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Módulos</h4>
-				<!-- *************************   Content ******************************************-->
-    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
-				<div class="hide">
-					<hr>
-					<blockquote>
-						Exercícios de fixação (Módulos)
-						<a class="btn btn-primary btn-lg" href="files/lista_exercicios_modulo.pdf" target="no_blank" title="Download">
-							<span class="glyphicon glyphicon-download-alt"></span>
-						</a>
-					</blockquote> 				
-				</div>  
-  			</li>
-			<li class="list-group-item">
-    			<h4 class="list-group-item-heading">Lista, Pilha e Fila</h4>
-
-<!-- *************************   Content ******************************************-->
-    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>
-				<div class="hide">
-					<hr>
-					<blockquote>
-						Exercícios de fixação (listas, pilhas e filas)
-						<a class="btn btn-primary btn-lg" href="files/Exercicios_lista_pilha_fila.pdf" target="no_blank" title="Download">
-							<span class="glyphicon glyphicon-download-alt"></span>
-						</a>
-					</blockquote> 				
-				</div>  
+    				<h4 class="list-group-item-heading">Modularização</h4>
   			</li>
 		</ul>
 
@@ -413,13 +287,13 @@
 			</li>
 			<li class="list-group-item list-group-item-danger">FARRER, H. et al. Algoritmos estruturados. 3. ed. Rio de Janeiro: LTC, 1999.</li>
 			<li class="list-group-item list-group-item-danger">KING, K. N. C Programming: A Modern Approach. 2. ed. New York: W. W. Norton & Company, 2008.</li>
+			<li class="list-group-item list-group-item-danger">MENDES, D. R. Programação Java com Ênfase em Orientação a Objetos. Ed 1, 2009 - ISBN: 978-85-7522-176-1, 2009.</li>
 		</ul>
 
 		<h4>Complementar</h4>
 		<ul class="list-group">
 			<li class="list-group-item list-group-item-info">CORMEN, T. H.; LEISERSON, C. E.; RIVEST, R. L. Introduction to algorithms. 2. ed. Cambridge: MIT Press and New York: McGraw-Hill, 2002.</li>
 			<li class="list-group-item list-group-item-info">EDMONDS, J. How to Think About Algorithms. 1.ed. Cambridge: Cambridge University Press, 2008.</li>
-			<li class="list-group-item list-group-item-info">MENDES, D. R. Programação Java com Ênfase em Orientação a Objetos. Ed 1, 2009 - ISBN: 978-85-7522-176-1, 2009.</li>
 		</ul>
 	</body>
 	<script language="javascript" type="text/javascript">

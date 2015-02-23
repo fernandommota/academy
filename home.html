@@ -9,13 +9,78 @@
 
 		<script src="js/jquery-2.1.1.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-
+		<title>Academy by Fernando Maia da Mota</title>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	</head>
 	<body>
-		<h3>Horários</h3>
+		<!--start div navbar -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Academy</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">        
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Disciplinas <span class="caret"></span></a>
+							<ul class="dropdown-menu multi-level" role="menu">
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">2014/2</a>
+									<ul class="dropdown-menu">
+										<li><a target="no_blank" href="disciplines/2014/fundamentos_oo/index.html">Fundamentos em Orientação a Objetos</a></li>
+										<li><a target="no_blank" href="disciplines/2014/si_digitais/index.html">Introdução a Sistemas Digitais</a></li>
+										<li><a target="no_blank" href="disciplines/2014/topicos_si/index.html">Tópicos em Sistemas de Informação</a></li>
+										<li><a target="no_blank" href="disciplines/2014/varios/index.html">Vários</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">2015/1</a>
+									<ul class="dropdown-menu">
+										<li><a target="no_blank" href="disciplines/2015/algoritmosI/index.html">Algoritmos e Programação I</a></li>
+										<li><a target="no_blank" href="#">Análise e Projeto de Software</a></li>										
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+	      
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav><!--end div navbar -->
+
+		<!--div presentation -->
+		<div class="head">
+			<!--
+			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+				<a href="#"><img src="https://avatars1.githubusercontent.com/u/263414" alt="fernandommota" class="img-thumbnail"></a>
+				<p>Fernando Maia da Mota</p>
+			</div>
+			-->
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<p>Atualmente é mestrando em Computação Aplicada pela Faculdade de Computação da Universidade Federal de Mato Grosso do Sul(FACOM/UFMS), possui graduação em Sistemas de Informação pela mesma UFMS. Tem experiência na área de Ciência da Computação, com ênfase em Sistemas de Computação, atuando principalmente nos seguintes temas: Data Warehouse e Webhouse, sistemas de informação para Web e Web semântica.</p>
+				<ul>
+					<li>Mail: <a href="mailto:mota.fernandomaia@gmail.com" target="_top">mota.fernandomaia@gmail.com</a></li>
+					<li>Blog: <a target="no_blank" href="http://fernandomaia.eti.br/blog/">http://fernandomaia.eti.br/blog/</a></li>
+					<li>Skype: fernandomaiadamota</li>
+					<li>Lattes: <a target="no_blank" href="http://lattes.cnpq.br/7189235418853671">http://lattes.cnpq.br/7189235418853671</a></li>
+				</ul>			
+			</div>
+		</div> <!-- end div presentation -->
+		
+		<hr>
+
+		<h3>Horários 2015/1</h3>
 		<div class="table-responsive">
 			<table class="table table-bordered">        
 				<thead>
@@ -68,20 +133,20 @@
 					</tr>
 					<tr>
 						<td>19:00 às 21:00</td>
-						<<td class="alert alert-success">Fundamentos em Orientação a Objetos</td>
-						<td class="alert alert-warning">Introdução a Sistemas Digitais</td>
+						<td class="alert alert-success">Algoritmos e Programação I</td>
 						<td></td>
-						<td class="alert alert-warning">Introdução a Sistemas Digitais</td>						
-						<td class="alert alert-info">Tópicos em Sistemas de Informação</td>
+						<td class="alert alert-success">Algoritmos e Programação I</td>	
+						<td></td>				
+						<td></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td>21:00 às 23:00</td>
-						<td></td>
-						<td></td>
-						<td class="alert alert-success">Fundamentos em Orientação a Objetos</td>
+						<td class="alert alert-success">Algoritmos e Programação I</td>
+						<td class="alert alert-warning">Análise e Projeto de Software</td>
+						<td class="alert alert-success">Algoritmos e Programação I</td>
+						<td class="alert alert-warning">Análise e Projeto de Software</td>
 						<td></td>						
-						<td class="alert alert-info">Tópicos em Sistemas de Informação</td>
 						<td></td>
 					</tr>
 				</tbody>
@@ -100,7 +165,7 @@
 		
 		<hr>
 		<h3>Links Importantes</h3>
-			<a href="http://www.preg.ufms.br/manager/titan.php?target=openFile&fileId=879" target="no_blank">Calendário UFMS 2014</a>
+			<a href="http://www.dct.ufms.br/gestor/titan.php?target=openFile&fileId=1521" target="no_blank">Calendário UFMS 2015</a>
 	</body>
 </html>
 
