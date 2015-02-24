@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">		
+
+		<link rel="stylesheet" href="../../../css/styles.css">
+		<link rel="stylesheet" href="../../../lib/bootstrap/css/bootstrap.min.css">
+		
+
+		<script src="../../../js/jquery-2.1.1.min.js"></script>
+		<script src="../../../lib/bootstrap/js/bootstrap.min.js"></script>
+		<title>Análise e Projeto de Software</title>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<h3>Avisos</h3>
+			
+		<hr>
+		<h3>Horário de atendimento</h3>
+			<ul>
+				<li>Professor: ??</li>
+			</ul>
+		<hr>
+		<h3>Avaliação</h3>
+			<ul>
+				<li>2 Provas teóricas: <var>P1(23/04/2015)</var> e <var>P2(18/06/2015)</var></li>
+				<li>1 Prova optativa: <var>PO(25/06/2015)</var></li>
+				<li>2 trabalho prático <var>T1(02/04/2015)</var> e <var>T2(14/05/2015)</var></li>
+				<li>Lista de Exercícios</li>
+			</ul>
+			
+			<strong>Média de aproveitamento:</strong> 
+			(((<var>P1</var> + <var>P2</var>) / 2) * 0.45) + (((<var>T1</var>+<var>T2</var>) / 2) * 0.4) + (ML*0.15) 
+
+		<hr>
+<!--	
+		<h3>Datas</h3>
+			<strong>As aulas serão ministradas as segundas e quartas-feiras, das 19:00 às 23:00.</strong>
+			<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=400&amp;wkst=1&amp;hl=pt_BR&amp;bgcolor=%23ffffff&amp;src=0e50hlm2lslk9757pii2ptiil%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FCampo_Grande" style=" border-width:0 " width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+		<hr>
+-->
+		<h3>Ementa</h3>
+		<ul class="list-group ementa">
+			<li class="list-group-item">
+    				<h4 class="list-group-item-heading">Modelos de processo de desenvolvimento prescritivo</h4> 		
+			</li>
+			<li class="list-group-item">
+    				<h4 class="list-group-item-heading">Modelos processo de desenvolvimento ágil</h4>
+  			</li>
+			<li class="list-group-item">
+    				<h4 class="list-group-item-heading">Engenharia de requisitos</h4>
+				<ul>
+					<li>Identificação de interessados</li>
+					<li>Reconhecimento de diversos pontos de vista</li>
+					<li>Trabalho na busca da colaboração</li>
+					<li>Técnica de levantamento de requisitos</li>
+				</ul>    			
+  			</li>
+			<li class="list-group-item">
+    				<h4 class="list-group-item-heading">Construção do modelo de análise</h4>	
+				<ul>
+					<li>Modelagem baseada em cenários</li>
+					<li>Diagramas de Caso de Uso</li>
+					<li>Diagramas de Atividades</li>
+					<li>Conceitos de Modelagem de Dados</li>
+					<li>Diagrama de classe</li>
+					<li>Diagrama de sequência</li>
+				</ul> 			
+  			</li>
+			<li class="list-group-item">
+    				<h4 class="list-group-item-heading">Construção do modelo de projeto</h4>	
+				<ul>
+					<li>Abstração</li>
+					<li>Encapsulamento de informações</li>
+					<li>Independência funcional</li>
+					<li>Conceitos de projeto orientado a objetos</li>
+					<li>Elementos de projeto de dados, de arquitetura, de interface, de componentes e de implantação</li>
+					<li>Diagramas de colaboração, de componente e de implantação</li>
+				</ul> 			  
+  			</li>
+		</ul>
+
+		<hr>	
+
+		<h3>Bibliografia</h3>
+		<h4>Básica</h4>
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-danger">BOOCH, G. et al. UML - Guia do usuário. 2. ed. Rio de Janeiro: Campus, 2005. LARMAN, C. Utilizando UML e padrões. 3. ed. Porto Alegre: Bookman, 2007.
+			</li>
+			<li class="list-group-item list-group-item-danger">WAZLAWICK, R. S. Análise e projeto de sistemas de informação orientados a objetos. Rio de Janeiro: Campus, 2004.</li>
+			<li class="list-group-item list-group-item-danger">MCLAUGHLIN BRETT, POLLICE GARY E WEST DAVID, Análise e Projeto Orientado a Objetos, Rio de Janeiro: Alta Books Editora, 2007.</li>
+		</ul>
+
+		<h4>Complementar</h4>
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-info">FOWLER, M. UML distilled: a brief guide to the standard object modeling language. 3. ed. Upple Saddle River: Addison-Wesley, 2003.</li>
+			<li class="list-group-item list-group-item-info">SCHACH, S. R. Object-oriented software engineering. New York: McGraw-Hill, 2007.</li>
+		</ul>
+	</body>
+	<script language="javascript" type="text/javascript">
+function showContent(element){
+	var divContent= $(element).next();
+	var button = $(element);
+	var li=$(element).parent();
+
+	if(divContent.hasClass("hide")){
+		//li.addClass("active");
+		divContent.removeClass("hide");
+		divContent.addClass("show");	
+		button.text("Esconder");
+	}else{
+		//li.removeClass("active");
+		divContent.removeClass("show");
+		divContent.addClass("hide");	
+		button.text("Exibir");
+	}	
+}
+function showContentAnswers(element){
+	var divContent= $(element).next();
+	var button = $(element);
+	var li=$(element).parent();
+
+	if(divContent.hasClass("hide")){
+		//li.addClass("active");
+		divContent.removeClass("hide");
+		divContent.addClass("show");	
+		button.text("Esconder resposta");
+	}else{
+		//li.removeClass("active");
+		divContent.removeClass("show");
+		divContent.addClass("hide");	
+		button.text("Exibir resposta");
+	}	
+}
+	</script>
+</html>
+
+
