@@ -48,201 +48,31 @@
 			<li class="list-group-item">
     			<h4 class="list-group-item-heading">Raciocínio lógico</h4> 		
 				
-				<!-- *************************   Content ******************************************
-    			<button class="btn btn-default" onclick="showContent(this);">Exibir</button>				
-				<div class="hide">
-					<hr>					
-					<h4>Introdução</h4>
-						<blockquote>
-							<p class="text-justify">É impossível ensinar alguém a pensar, já que todas as pessoas já nascem com essa capacidade.</p>
-						</blockquote>
-						<blockquote>
-							<p class="text-justify">Nosso objetivo aqui é o de compreender como desenvolver e aperfeiçoar a técnica de pensamento, no que diz respeito ao raciocínio lógico e matemático. Isso é fundamental para desenvolvermos a nossa capacidade de resolver problemas e de programar computadores.</p>
-						</blockquote>
-						<blockquote>
-							<p class="text-justify">Impor disciplina ao cérebro é um processo que, muitas vezes, produz resultados a longo prazo.</p>
-							<p class="text-justify">Se o seu interesse é obter resultados a curto e médio prazo, é fundamental que haja uma atividade mental constante e muita persistência</p>
-							<p class="text-justify">Devemos estar preparados e motivados para nos dedicarmos a uma prática constante de todos os conceitos vistos em sala de aula. Portanto, leitura, pesquisa e exercícios nunca serão demais nesse processo.</p>
-						</blockquote>
-						<blockquote>
-							<p class="text-justify">Na vida, se temos um objetivo e nos planejamos para alcança-lo, a possibilidade de sucesso torna-se bem maior do que quando não existe um planejamento.</p>
-							<p class="text-justify">A mesma idéia pode ser aplicada à resolução de problemas e ao desenvolvimento de programas.</p>
-							<p class="text-justify">Nunca devemos começar a programar a partir do nada, pois quando se começa a escrever um programa sem termos pensado e refletido sobre o problema que deu origem a ele, fica difícil visualizá-lo como um todo.</p>
-							<p class="text-justify">O entendimento adequado do programa, a compreensão de sua solução e a criação de um “rascunho” prévio do programa (algoritmo) e da solução são necessários para a definição da abordagem mais adequada para o problema.</p>
-							<p class="text-justify">Além disso, esquematizar o programa ajuda a fixar exatamente o que se deseja, a economizar tempo em frente ao monitor na tentativa de escrever um programa que cumpra o desejado e a superar as dificuldades que, por ventura, venham a ser encontradas.</p>
-						</blockquote>
-						<blockquote>
-							<p class="text-justify">“Lógica é a ciência que estuda princípios e métodos de inferência, tendo o objetivo principal de determinar em que condições certas coisas se seguem (são consequência), ou não, de outras.” (Mortari, 2001)</p>
-						</blockquote>
-						<blockquote>
-							<p class="text-justify">Em lógica, pode-se distinguir três tipos de raciocínio lógico: dedução, indução e abdução. Dada uma premissa, uma conclusão, e uma regra segundo a qual a premissa implica a conclusão, eles podem ser explicados da seguinte forma (Wikipédia, 2014):
-								<ul>
-									<li>Dedução corresponde a determinar a conclusão. Utiliza-se da regra e sua premissa para chegar a uma conclusão. Exemplo: "Quando chove, a grama fica molhada. Choveu hoje. Portanto, a grama está molhada." É comum associar os matemáticos com este tipo de raciocínio.</li>
-									<li>Indução é determinar a regra. É aprender a regra a partir de diversos exemplos de como a conclusão segue da premissa. Exemplo: "A grama ficou molhada todas as vezes em que choveu. Então, se chover amanhã, a grama ficará molhada." É comum associar os cientistas com este estilo de raciocínio.</li>
-									<li>Abdução significa determinar a premissa. Usa-se a conclusão e a regra para defender que a premissa poderia explicar a conclusão. Exemplo: "Quando chove, a grama fica molhada. A grama está molhada, então pode ter chovido." Associa-se este tipo de raciocínio aos diagnosticistas e detetives.</li>
-								</ul>
-							</p>							
-						</blockquote>	
-						<blockquote>
-							<p class="text-justify">Exemplos de questões de lógica:</p>
-							<ul>
-								<li>Simbologias das operações lógicas de proposições
-									<ul>
-										<li>a) Não/Negação: ~. Exemplo: ~ p, &not; p Alexandre não é médico.</li>
-										<li>b) E/Conjunção: &and;. Exemplo: A &and; B (A e B) Alexandre é professor e contador.</li>
-										<li>c) Ou/Disjunção: &or;. Exemplo: A &or; B (A ou B) Alexandre é professor ou é médico.</li>
-										<li>d) Disjunção exclusiva: &oplus;. Exemplo: A &oplus; B (A XOR B) Alexandre é paulista ou campo-grandense.</li>
-										<li>e) Então/Condicional: &rarr;. Exemplo: A &rarr; B (Se A então B) Se Alexandre é professor então ele possui registro no MEC.</li>
-										<li>f) Se e somente se/ Bi Condicional: &harr;. Exemplo: Arthur é meu sobrinho se e somente se é filho de um de meus irmãos.</li>
-									</ul>
-								</li>
-								<hr>	
-								<li>De 01 a 06 - Sendo <var>p</var> a proposição <strong>Roberto é arquiteto</strong> e <var>q</var> a proposição <strong>Rogério é engenheiro</strong>, traduzir para linguagem corrente as seguintes proposições:
-									<ul>
-										<li><b>01</b> ~q</li>
-										<li><b>02</b> p &and; ~q</li>
-										<li><b>03</b> ~ (p&or;q)</li>
-										<li><b>04</b> ~p &rarr; (~q)</li>
-										<li><b>05</b> ~ (~p &rarr; ~q)</li>
-										<li><b>06</b> (~p) &harr; ~q</li>
-									</ul>
-									<button class="btn btn-default" onclick="showContentAnswers(this);">Exibir resposta</button>
-									<div class="hide">
-										<ul>
-											<li><b>01</b> ~q - Rogério não é engenheiro.</li>
-											<li><b>02</b> p &and; ~q - Roberto é arquiteto e Rogério não é engenheiro.</li>
-											<li><b>03</b> ~ (p&or;q) - Não é verdade que Roberto é arquiteto ou Rogério é engenheiro.</li>
-											<li><b>04</b> ~p &rarr; (~q) - Se Roberto não é arquiteto então Rogério não é engenheiro.</li>
-											<li><b>05</b> ~ (~p &rarr; ~q) - Não é verdade que, se Roberto não é arquiteto então Rogério não é engenheiro.</li>
-											<li><b>06</b> (~p) &harr; ~q - Roberto não é arquiteto se e somente se Rogério não for engenheiro.</li>
-										</ul>
-									</div>
-								</li>
-								<li>De 07 a 12 - Sendo <var>p</var> a proposição <strong>Albert é médico</strong> e <var>q</var> a proposição <strong>Alberto é mecânico</strong>, traduzir para linguagem corrente as seguintes proposições:
-									<ul>
-										<li><b>07</b> ~q</li>
-										<li><b>08</b> ~p &and; q</li>
-										<li><b>09</b> ~ (~p&or;q)</li>
-										<li><b>10</b> p &rarr; (~q)</li>
-										<li><b>11</b> ~ (~p &rarr; q)</li>
-										<li><b>12</b> (~p) &harr; q</li>
-									</ul>
-									<button class="btn btn-default" onclick="showContentAnswers(this);">Exibir resposta</button>
-									<div class="hide">
-										<ul>
-											<li><b>07</b> ~q - Alberto não é mecânico.</li>
-											<li><b>08</b> ~p &and; q - Albert não é médico e Alberto é mecânico.</li>
-											<li><b>09</b> ~ (~p&or;q) - Não é verdade que Albert não é médico ou Alberto é mecânico.</li>
-											<li><b>10</b> p &rarr; (~q) - Se Albert é médico então Alberto não é mecânico.</li>
-											<li><b>11</b> ~ (~p &rarr; q) - Não é verdade que, se Albert não é médico então Alberto é mecânico.</li>
-											<li><b>12</b> (~p) &harr; q - Albert não é médico se e somente se Alberto é mecânico.</li>
-										</ul>
-									</div>
-								</li>
-								<hr>
-								<li>Equivalência e Condições existentes na condicional
-									<p>Seja a condicional: p &rarr; q</p>
-									<p>Então temos que:</p>
-									<ul>
-										<li>p é condição suficiente para q</li>
-										<li>q é condição necessária para p</li>
-										<li>p é condição necessária e suficente para q (bi condicional)</li>
-										<li>q é condição necessária e suficiente para p (bi condicional)</li>
-									</ul>		
-								</li>
-								<hr>
-								<li>Se Pedro gosta de pimenta, então ele é falante. Portanto:
-									<ul>
-										<li>a) Se Pedro não é falante, então ele não gosta de pimenta.</li>
-										<li>b) Se Pedro é falante, então ele gosta de pimenta.</li>
-										<li>c) Se Pedro é falante, então ele não gosta de pimenta.</li>
-										<li>d) Se Pedro não gosta de pimenta, então ele não é falante.</li>
-										<li>e) Se Pedro gosta de pimenta, então ele não é falante.</li>
-									</ul>
-									<button class="btn btn-default" onclick="showContentAnswers(this);">Exibir resposta</button>
-									<div class="hide">
-										<ul>
-											<li>a) Se Pedro não é falante, então ele não gosta de pimenta.</li>
-										</ul>
-									</div>
-								</li>
-								<li>Se Rodrigo mentiu,então ele é culpado. Logo:
-									<ul>
-										<li>a) Se Rodrigo não é culpado, então ele não mentiu.</li>
-										<li>b) Rodrigo é culpado.</li>
-										<li>c) Se Rodrigo não mentiu, então ele não é culpado.</li>
-										<li>d) Rodrigo mentiu.</li>
-										<li>e) Se Rodrigo é culpado, então ele mentiu.</li>
-									</ul>
-									<button class="btn btn-default" onclick="showContentAnswers(this);">Exibir resposta</button>
-									<div class="hide">
-										<ul>
-											<li>a) Se Rodrigo não é culpado, então ele não mentiu.</li>
-										</ul>
-									</div>
-								</li>	
-								<li>Se o pai de meu pai morreu e o irmão de meu pai está vivo, então:
-									<ul>
-										<li>a) Minha avó ficou viúva e minha tia começou a cantar.</li>
-										<li>b) Meu avô morreu e minha tia virou cantora.</li>
-										<li>c) Minha avó ficou viúva e minha tia casou novamente.</li>
-										<li>d) Minha avó ficou viúva e minha tia, não ficou.</li>
-										<li>e) Meu tio está vivo e meu avô sofreu um acidente.</li>
-									</ul>
-									<button class="btn btn-default" onclick="showContentAnswers(this);">Exibir resposta</button>
-									<div class="hide">
-										<ul>
-											<li>d) Minha avó ficou viúva e minha tia, não ficou.</li>
-										</ul>
-									</div>
-								</li>	
-								<li>Se você se esforçar, então irá vencer. Assim sendo,
-									<ul>
-										<li>a) seu esforço é condição suficiente para vencer.</li>
-										<li>b) seu esforço é condição necessária para vencer.</li>
-										<li>c) se você não se esforçar, então não irá vencer.</li>
-										<li>d) você vencerá só se se esforçar.</li>
-										<li>e) mesmo que se esforce, você não vencerá.</li>
-									</ul>
-									<button class="btn btn-default" onclick="showContentAnswers(this);">Exibir resposta</button>
-									<div class="hide">
-										<ul>
-											<li>a) seu esforço é condição suficiente para vencer.</li>
-										</ul>
-									</div>
-								</li>
-								<li>Duas grandezas <var>x</var> e <var>y</var> são tais que: "Se x = 3, então y=7". Pode-se concluir que:
-									<ul>
-										<li>a) se x &ne; 3, então y &ne; 7.</li>
-										<li>b) se y = 7, então x = 3.</li>
-										<li>c) se y &ne; 7, então x &ne; 3.</li>
-										<li>d) se x = 5, então y = 5.</li>
-										<li>e) se x = 7, então y = 3.</li>
-									</ul>
-									<button class="btn btn-default" onclick="showContentAnswers(this);">Exibir resposta</button>
-									<div class="hide">
-										<ul>
-											<li>c) se y &ne; 7, então x &ne; 3.</li>
-										</ul>
-									</div>
-								</li>		
-							</ul>						
-						</blockquote>	
-						<blockquote>
-							Referências
-							<ul>
-								<li>SIQUEIRA, Marcelo F. Algoritmos e Estrutura de Dados. Mato Grosso do Sul: CCET/CPCX - UFMS, 2007.</li>
-								<li>MORTARI, Cezar A. Introdução à lógica. 1. ed. São Paulo, SP: UNESP, 2001.</li>
-								<li>Wikipédia. Raciocínio lógico. Disponível em http://pt.wikipedia.org/wiki/Racioc%C3%ADnio_l%C3%B3gico - Acessado em 08/08/2014.</li>
-							</ul>
-						</blockquote> 
-				</div>-->				
+				<a 
+					class="btn btn-primary btn-lg" 
+					href="files/01_apresentacao_introducao_logica.pdf" 
+					target="no_blank" 
+					title="Download">
+					Aula 01 - Apresentação e Introdução a Lógica
+					<span class="glyphicon glyphicon-download-alt"></span>
+				</a>			
+				<br><br>
+				<a 
+					class="btn btn-primary btn-lg" 
+					href="files/02_introducao_a_computacao.pdf" 
+					target="no_blank" 
+					title="Download">
+					Aula 02 - Introdução a Computação
+					<span class="glyphicon glyphicon-download-alt"></span>
+				</a>					
   			</li>
 			<li class="list-group-item">
     				<h4 class="list-group-item-heading">Variáveis e Tipos de Dados</h4>
 				<ul>
 					<li>inteiros, reais, booleanas, literais, caracter</li>
-				</ul>	    		
+				</ul>
+
+				    		
   			</li>
 			<li class="list-group-item">
     				<h4 class="list-group-item-heading"> Estrutura Sequencial</h4>
